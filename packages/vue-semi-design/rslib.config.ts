@@ -2,6 +2,7 @@ import { pluginSass } from '@rsbuild/plugin-sass'
 import { defineConfig } from '@rslib/core'
 import { glob } from 'glob'
 import { pluginUnpluginVue } from 'rsbuild-plugin-unplugin-vue'
+import * as sass from 'sass'
 
 // @ts-expect-error allow async config
 export default defineConfig(async () => {
@@ -9,6 +10,7 @@ export default defineConfig(async () => {
 
   return {
     lib: [
+      // build umd bundle
       {
         bundle: true,
         dts: false,
@@ -23,9 +25,7 @@ export default defineConfig(async () => {
       {
         bundle: false,
         format: 'esm',
-        dts: {
-          distPath: './dist/es',
-        },
+        dts: true,
         source: {
           entry: {
             index: ['./src/components/**/*', '!**/*.stories.ts'],
@@ -33,13 +33,15 @@ export default defineConfig(async () => {
         },
         output: {
           distPath: {
-            root: './dist/es/components',
+            root: './dist/es',
+            js: './components',
           },
         },
       },
       // build styles
       {
         bundle: false,
+        format: 'esm',
         source: {
           entry: scssFiles,
         },
@@ -62,7 +64,12 @@ export default defineConfig(async () => {
           },
         },
       }),
-      pluginSass(),
+      pluginSass({
+        sassLoaderOptions: {
+          implementation: sass,
+          sourceMap: true,
+        },
+      }),
     ],
   }
 })
