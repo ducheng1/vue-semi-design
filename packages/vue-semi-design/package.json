@@ -1,0 +1,44 @@
+{
+  "name": "vue-semi-design",
+  "type": "module",
+  "version": "0.0.1-alpha.0",
+  "packageManager": "pnpm@10.15.0",
+  "description": "Vue3 component library in semi design style",
+  "author": {
+    "name": "ducheng1",
+    "email": "w729567588@163.com"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev": "rslib build --watch",
+    "build": "rslib build && vue-tsc"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "~1.5.3",
+    "@rsbuild/plugin-sass": "^1.4.0",
+    "@rslib/core": "^0.12.4",
+    "rsbuild-plugin-unplugin-vue": "^0.1.0",
+    "sass": "^1.92.0",
+    "sass-loader": "^16.0.5",
+    "typescript": "^5.9.2",
+    "vue": "^3.5.21",
+    "vue-tsc": "^3.0.6"
+  }
+}

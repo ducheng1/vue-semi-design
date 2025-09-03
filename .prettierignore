@@ -1,0 +1,21 @@
+# Format with eslint-plugin-format
+*.md
+*.html
+
+# Cache
+.eslintcache
+.stylelintcache
+pnpm-lock.yaml
+
+# Build
+dist/
+
+# Logs
+logs/
+*.log
+
+# Node
+node_modules
+
+# IDE
+.idea

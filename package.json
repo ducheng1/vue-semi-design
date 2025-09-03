@@ -1,0 +1,98 @@
+{
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.15.0",
+  "description": "Vue3 component library in semi design style",
+  "author": {
+    "name": "ducheng1",
+    "email": "w729567588@163.com"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:lib": "pnpm run --filter vue-semi-design dev",
+    "dev:storybook": "storybook dev -p 5610 --no-open",
+    "build": "pnpm run --filter vue-semi-design build",
+    "lint": "npm-run-all -s lint:*",
+    "lint:code": "eslint . --fix --cache --cache-location=node_modules/.cache/eslint/",
+    "lint:style": "stylelint **/*.{scss,vue} --fix --cache --cache-location=node_modules/.cache/stylelint/",
+    "test": "vitest run",
+    "commit": "git add . && git-cz",
+    "preinstall": "npx only-allow pnpm",
+    "commitlint": "commitlint --edit",
+    "prepare": "husky",
+    "depcheck": "pnpx taze major -wIr",
+    "clean": "node ./scripts/clean.js",
+    "reinstall": "node ./scripts/clean.js -p && pnpm install"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@rsbuild/core": "~1.5.3",
+    "@rsbuild/plugin-sass": "^1.4.0",
+    "@rsbuild/plugin-vue": "^1.1.2",
+    "@rslib/core": "^0.12.4",
+    "@storybook/addon-docs": "^9.1.4",
+    "@storybook/addon-essentials": "9.0.0-alpha.12",
+    "@storybook/addon-interactions": "^9.0.0-alpha.10",
+    "@storybook/addon-links": "^9.1.4",
+    "@storybook/addon-onboarding": "^9.1.4",
+    "@storybook/blocks": "9.0.0-alpha.17",
+    "@storybook/test": "^9.0.0-alpha.2",
+    "@storybook/vue3": "^9.1.4",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/vue": "^8.1.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-format": "^1.0.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "glob": "^11.0.3",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^16.1.6",
+    "npm-run-all2": "^8.0.4",
+    "postcss-html": "^1.8.0",
+    "prettier": "^3.6.2",
+    "rsbuild-plugin-unplugin-vue": "^0.1.0",
+    "sass": "^1.92.0",
+    "sass-loader": "^16.0.5",
+    "storybook": "^9.1.4",
+    "storybook-vue3-rsbuild": "^2.1.0",
+    "stylelint": "^16.23.1",
+    "stylelint-config-clean-order": "^7.0.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-prettier": "^5.0.3",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.21",
+    "vue-tsc": "^3.0.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}
