@@ -36,7 +36,9 @@
   },
   "scripts": {
     "dev": "rslib build --watch",
-    "build": "rslib build && vue-tsc"
+    "build": "rslib build && vue-tsc",
+    "publish": "npm publish",
+    "prepublish": "pnpm run build"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
