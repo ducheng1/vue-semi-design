@@ -1,0 +1,10 @@
+@mixin base() {
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}

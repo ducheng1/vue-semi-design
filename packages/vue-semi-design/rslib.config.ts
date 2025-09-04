@@ -30,13 +30,12 @@ function buildEsm(styleEntry: Record<string, string>): LibConfig[] {
       bundle: false,
       source: {
         entry: styleEntry,
-        exclude: ['src/styles/index.scss'],
       },
       output: {
         target: 'web',
         cleanDistPath: true,
         distPath: {
-          root: './dist/es/styles',
+          root: './dist/styles',
         },
         copy: [
           {
@@ -81,6 +80,12 @@ function buildUmd(): LibConfig[] {
         distPath: {
           root: './dist/umd',
         },
+        minify: {
+          css: true,
+          cssOptions: {
+            removeUnusedLocalIdents: true,
+          },
+        },
       },
     },
   ]
@@ -89,7 +94,7 @@ function buildUmd(): LibConfig[] {
 export default defineConfig(async () => {
   const scssFiles = await glob('src/styles/**/*.scss', {
     platform: 'linux',
-    ignore: ['src/styles/index.scss'],
+    // ignore: ['src/styles/index.scss'],
   })
 
   const scssEntries = Object.fromEntries(

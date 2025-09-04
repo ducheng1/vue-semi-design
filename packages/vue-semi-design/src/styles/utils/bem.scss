@@ -1,0 +1,43 @@
+@use '../common/constants' as c;
+
+$block-class: null;
+$element-class: null;
+
+@mixin b($block) {
+  $block-class: c.$namespace + c.$block-prefix + $block !global;
+
+  .#{$block-class} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $element-class: $element !global;
+  $selector: &;
+  $current-selector: '';
+
+  @each $el in $element {
+    $current-selector: #{$current-selector + '.' + $block-class + c.$element-prefix + $el + ','};
+  }
+
+  @at-root {
+    #{$current-selector} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: &;
+  $current-selector: '';
+
+  @each $el in $modifier {
+    $current-selector: #{$current-selector + '.' + $block-class + c.$modifier-prefix + $el + ','};
+  }
+
+  @at-root {
+    #{$current-selector} {
+      @content;
+    }
+  }
+}

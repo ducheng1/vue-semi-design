@@ -14,16 +14,16 @@ const {
   size = 'medium',
 } = defineProps<ButtonProps>()
 
-const baseClass = bem('button')
+const b = bem('button')
 
-const mode = computed(() => (primary ? 'semi-button--primary' : 'semi-button--secondary'))
-const isTertiary = computed(() => (tertiary ? 'semi-button--tertiary' : ''))
+const mode = computed(() => (primary ? b({ primary }) : b({ secondary: true })))
+const isTertiary = computed(() => (tertiary ? b({ tertiary }) : ''))
 </script>
 
 <template>
   <button
     type="button"
-    :class="[baseClass(), `semi-button--${size}`, mode, isTertiary]"
+    :class="[b(), `semi-button--${size}`, mode, isTertiary]"
     :style="{ backgroundColor }"
   >
     <slot></slot>

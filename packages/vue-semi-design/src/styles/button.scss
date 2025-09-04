@@ -1,18 +1,23 @@
-.semi-button {
+@use './utils/bem' as *;
+@use './common/base' as *;
+@use './common/constants' as *;
+
+@include b(button) {
+  @include base;
+
   cursor: pointer;
-
   display: inline-block;
-
-  border: 0;
-  border-radius: 3em;
-
-  font-weight: 700;
   line-height: 1;
-}
 
-.semi-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+  @include m(primary) {
+    color: white;
+    background-color: var(--#{$namespace}-color-primary);
+  }
+
+  @include m(tertiary) {
+    color: white;
+    background-color: #1ea7fd;
+  }
 }
 
 .semi-button--secondary {

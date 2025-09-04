@@ -137,6 +137,9 @@ importers:
       vue:
         specifier: ^3.5.21
         version: 3.5.21(typescript@5.9.2)
+      vue-semi-design:
+        specifier: workspace:*
+        version: link:packages/vue-semi-design
       vue-tsc:
         specifier: ^3.0.6
         version: 3.0.6(typescript@5.9.2)

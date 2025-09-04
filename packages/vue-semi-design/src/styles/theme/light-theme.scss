@@ -1,0 +1,120 @@
+@use 'sass:map';
+@use 'sass:color';
+@use '../tokens/light' as *;
+
+// 主色系列
+$primary: #{map.get($blue, 5)};
+$primary-hover: #{map.get($blue, 6)};
+$primary-active: #{map.get($blue, 7)};
+$primary-disabled: #{map.get($blue, 2)};
+
+// 浅版主色
+$primary-light: #{map.get($blue, 0)};
+$primary-light-hover: #{map.get($blue, 1)};
+$primary-light-active: #{map.get($blue, 2)};
+
+// 次要色系列
+$secondary: #{map.get($light-blue, 5)};
+$secondary-hover: #{map.get($light-blue, 6)};
+$secondary-active: #{map.get($light-blue, 7)};
+$secondary-disabled: #{map.get($light-blue, 2)};
+
+// 浅版次要色
+$secondary-light: #{map.get($light-blue, 0)};
+$secondary-light-hover: #{map.get($light-blue, 1)};
+$secondary-light-active: #{map.get($light-blue, 2)};
+
+// 第三色系列
+$tertiary: #{map.get($grey, 5)};
+$tertiary-hover: #{map.get($grey, 6)};
+$tertiary-active: #{map.get($grey, 7)};
+
+// 浅版第三色
+$tertiary-light: #{map.get($grey, 0)};
+$tertiary-light-hover: #{map.get($grey, 1)};
+$tertiary-light-active: #{map.get($grey, 2)};
+
+// 信息色系列
+$info: #{map.get($blue, 5)};
+$info-hover: #{map.get($blue, 6)};
+$info-active: #{map.get($blue, 7)};
+$info-disabled: #{map.get($blue, 2)};
+
+// 浅版信息色
+$info-light: #{map.get($blue, 0)};
+$info-light-hover: #{map.get($blue, 1)};
+$info-light-active: #{map.get($blue, 2)};
+
+// 成功色系列
+$success: #{map.get($green, 5)};
+$success-hover: #{map.get($green, 6)};
+$success-active: #{map.get($green, 7)};
+$success-disabled: #{map.get($green, 2)};
+
+// 浅版成功色
+$success-light: #{map.get($green, 0)};
+$success-light-hover: #{map.get($green, 1)};
+$success-light-active: #{map.get($green, 2)};
+
+// 危险色系列
+$danger: #{map.get($red, 5)};
+$danger-hover: #{map.get($red, 6)};
+$danger-active: #{map.get($red, 7)};
+$danger-disabled: #{map.get($red, 2)};
+
+// 浅版危险色
+$danger-light: #{map.get($red, 0)};
+$danger-light-hover: #{map.get($red, 1)};
+$danger-light-active: #{map.get($red, 2)};
+
+// 警告色系列
+$warning: #{map.get($orange, 5)};
+$warning-hover: #{map.get($orange, 6)};
+$warning-active: #{map.get($orange, 7)};
+$warning-disabled: #{map.get($orange, 2)};
+
+// 浅版警告色
+$warning-light: #{map.get($orange, 0)};
+$warning-light-hover: #{map.get($orange, 1)};
+$warning-light-active: #{map.get($orange, 2)};
+
+// 文本色
+$text-0: #{map.get($grey, 9)};
+$text-1: #{color.change(map.get($grey, 9), $alpha: 0.8)};
+$text-2: #{color.change(map.get($grey, 9), $alpha: 0.62)};
+$text-3: #{color.change(map.get($grey, 9), $alpha: 0.35)};
+
+// 链接色
+$link: #{map.get($blue, 5)};
+$link-hover: #{map.get($blue, 6)};
+$link-active: #{map.get($blue, 7)};
+$link-visited: #{map.get($blue, 5)};
+
+// 背景色
+$bg-0: #{$white};
+$bg-1: #{$white};
+$bg-2: #{$white};
+$bg-3: #{$white};
+$bg-4: #{$white};
+
+// 填充色
+$fill-0: #{color.change(map.get($grey, 8), $alpha: 0.05)};
+$fill-1: #{color.change(map.get($grey, 8), $alpha: 0.09)};
+$fill-2: #{color.change(map.get($grey, 8), $alpha: 0.13)};
+
+// 边框色
+$border: #{color.change(map.get($grey, 9), $alpha: 0.08)};
+
+// 禁用态
+$text-disabled: #{color.change(map.get($grey, 9), $alpha: 0.35)};
+$border-disabled: #{map.get($grey, 1)};
+$bg-disabled: #{map.get($grey, 1)};
+$fill-disabled: #{color.change(map.get($grey, 8), $alpha: 0.04)};
+
+// 拟阴影色
+$shadow: #{color.change($black, $alpha: 0.04)};
+
+// 阴影效果
+$shadow-elevated:
+  0 0 1px rgb(0 0 0 / 30%),
+  0 4px 14px rgb(0 0 0 / 10%);

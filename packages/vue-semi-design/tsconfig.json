@@ -16,6 +16,7 @@
     "noUnusedParameters": true,
     "declaration": true,
     "emitDeclarationOnly": true,
+    "outDir": "dist/es",
     "isolatedModules": true,
     "skipLibCheck": true
   },
