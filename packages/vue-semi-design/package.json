@@ -17,6 +17,12 @@
   "bugs": {
     "url": "https://github.com/ducheng1/vue-semi-design/issues"
   },
+  "keywords": [
+    "semi design",
+    "vue",
+    "component library",
+    "ui library"
+  ],
   "exports": {
     ".": {
       "types": "./dist/es/index.d.ts",
