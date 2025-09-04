@@ -41,8 +41,10 @@ export function bem(componentName: string) {
     }
     // loop modifiers
     const modifiedClassNames = Object.entries(modifiers).reduce((res, [modifier, value]) => {
-      if (typeof value === 'boolean' && value) {
-        res.push(className + modifierPrefix + modifier)
+      if (typeof value === 'boolean') {
+        if (value) {
+          res.push(className + modifierPrefix + modifier)
+        }
       } else {
         res.push(className + modifierPrefix + value)
       }
