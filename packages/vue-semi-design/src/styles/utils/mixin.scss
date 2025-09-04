@@ -1,0 +1,31 @@
+@mixin base-style() {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  background: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin flex-c() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-bc() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin inline-flex-c() {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

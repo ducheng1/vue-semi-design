@@ -1,13 +1,15 @@
 @use './utils/bem' as *;
-@use './common/base' as *;
 @use './common/constants' as *;
+@use './utils/mixin' as *;
+@use './common/vars' as *;
 
 @include b(button) {
-  @include base;
+  @include base-style;
+  @include inline-flex-c;
 
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  height: $height-control-default;
+  padding: 6px 12px;
 
   @include m(primary) {
     color: white;
@@ -24,19 +26,4 @@
   color: #333;
   background-color: transparent;
   box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
-}
-
-.semi-button--small {
-  padding: 10px 16px;
-  font-size: 12px;
-}
-
-.semi-button--medium {
-  padding: 11px 20px;
-  font-size: 14px;
-}
-
-.semi-button--large {
-  padding: 12px 24px;
-  font-size: 16px;
 }
