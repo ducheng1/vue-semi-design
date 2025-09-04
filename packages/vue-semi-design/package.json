@@ -29,7 +29,8 @@
       "import": "./dist/es/index.js"
     },
     "./styles/*": "./dist/styles/*",
-    "./umd/*": "./dist/umd/*"
+    "./umd/*": "./dist/umd/*",
+    "./es/*": "./dist/es/*"
   },
   "main": "./dist/umd/index.js",
   "types": "./dist/es/index.d.ts",
