@@ -7,21 +7,14 @@ defineOptions({
   name: 'SemiButton',
 })
 
-const {
-  type = 'primary',
-  theme = 'light',
-  size = 'default',
-  disabled,
-  block,
-  htmlType = 'button',
-} = defineProps<ButtonProps>()
+const { type, theme, size, disabled, block, htmlType = 'button' } = defineProps<ButtonProps>()
 
 const b = bem('button')
 
 const className = computed<string>(() =>
   b({
-    type: disabled ? false : type,
-    theme,
+    type: disabled ? false : type || 'primary',
+    theme: theme || 'light',
     disabled,
     size: size === 'default' ? false : size,
     block,

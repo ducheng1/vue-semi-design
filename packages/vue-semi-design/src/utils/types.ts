@@ -5,3 +5,5 @@ export type DeepPartial<T> = {
 }
 
 export type ComponentWithInstall<T> = T & Plugin
+
+export type Nullable<T> = undefined | null | T

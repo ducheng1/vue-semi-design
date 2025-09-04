@@ -1,3 +1,4 @@
+import type { Nullable } from './types'
 import { blockPrefix, elementPrefix, modifierPrefix, namespace } from '../constants'
 
 /**
@@ -17,8 +18,8 @@ export function bem(componentName: string) {
    * with both params: `semi-button__content--primary`
    */
   return function (
-    elementOrModifiers?: string | Record<string, string | boolean>,
-    modifiers?: Record<string, string | boolean>,
+    elementOrModifiers?: string | Record<string, Nullable<string | boolean>>,
+    modifiers?: Record<string, Nullable<string | boolean>>,
   ) {
     let className = namespace + blockPrefix + componentName
     if (!elementOrModifiers) {
