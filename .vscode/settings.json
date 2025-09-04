@@ -62,9 +62,11 @@
   "explorer.fileNesting.expand": true,
   "explorer.fileNesting.patterns": {
     "tsconfig.json": "tsconfig.*.json",
-    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, README.md",
-    "eslint.config.js": "*.config.js, .prettierignore, .stylelintignore, .editorconfig",
-    ".npmrc": ".node-version, .nvmrc"
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml",
+    "eslint.config.js": "commitlint.config.js, prettier.config.js, stylelint.config.js, lint-staged.config.js, .prettierignore, .stylelintignore, .editorconfig",
+    ".npmrc": ".node-version, .nvmrc",
+    "vitest.config.js": "vitest.setup.js",
+    "README.md": "CHANGELOG.md, README.*.md, LICENSE"
   },
 
   "typescript.tsdk": "${workspaceFolder}/node_modules/typescript/lib"

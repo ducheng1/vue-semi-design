@@ -1,61 +1,111 @@
+import type { LibConfig } from '@rslib/core'
 import { pluginSass } from '@rsbuild/plugin-sass'
 import { defineConfig } from '@rslib/core'
 import { glob } from 'glob'
 import { pluginUnpluginVue } from 'rsbuild-plugin-unplugin-vue'
 import * as sass from 'sass'
 
-// @ts-expect-error allow async config
+function buildEsm(styleEntry: Record<string, string>): LibConfig[] {
+  return [
+    // build vue and ts
+    {
+      bundle: false,
+      dts: true,
+      format: 'esm',
+      source: {
+        entry: {
+          index: ['./src/**/*', '!**/*.stories.ts', '!./src/styles/**/*'],
+        },
+      },
+      output: {
+        target: 'web',
+        cleanDistPath: true,
+        distPath: {
+          root: './dist/es',
+        },
+      },
+    },
+    // build styles
+    {
+      bundle: false,
+      source: {
+        entry: styleEntry,
+        exclude: ['src/styles/index.scss'],
+      },
+      output: {
+        target: 'web',
+        cleanDistPath: true,
+        distPath: {
+          root: './dist/es/styles',
+        },
+        copy: [
+          {
+            from: '**/*.scss',
+            context: 'src/styles',
+            to: 'src',
+            globOptions: {
+              ignore: ['**/index.scss'],
+            },
+          },
+        ],
+      },
+    },
+  ]
+}
+
+function buildUmd(): LibConfig[] {
+  return [
+    // js
+    {
+      bundle: true,
+      dts: false,
+      format: 'umd',
+      output: {
+        target: 'web',
+        cleanDistPath: true,
+        distPath: {
+          root: './dist/umd',
+        },
+      },
+    },
+    {
+      bundle: true,
+      source: {
+        entry: {
+          index: './src/styles/index.scss',
+        },
+      },
+      output: {
+        target: 'web',
+        cleanDistPath: true,
+        distPath: {
+          root: './dist/umd',
+        },
+      },
+    },
+  ]
+}
+
 export default defineConfig(async () => {
-  const scssFiles = await glob('src/styles/**/*.scss', { platform: 'linux' })
+  const scssFiles = await glob('src/styles/**/*.scss', {
+    platform: 'linux',
+    ignore: ['src/styles/index.scss'],
+  })
+
+  const scssEntries = Object.fromEntries(
+    scssFiles.map((file) => {
+      const entry = file.replace('src/styles/', '').replace('.scss', '')
+      return [entry, file]
+    }),
+  )
 
   return {
     lib: [
-      // build umd bundle
-      {
-        bundle: true,
-        dts: false,
-        format: 'umd',
-        output: {
-          distPath: {
-            root: './dist/umd',
-          },
-        },
-      },
-      // build components
-      {
-        bundle: false,
-        format: 'esm',
-        dts: true,
-        source: {
-          entry: {
-            index: ['./src/components/**/*', '!**/*.stories.ts'],
-          },
-        },
-        output: {
-          distPath: {
-            root: './dist/es',
-            js: './components',
-          },
-        },
-      },
-      // build styles
-      {
-        bundle: false,
-        format: 'esm',
-        source: {
-          entry: scssFiles,
-        },
-        output: {
-          distPath: {
-            root: './dist/es/styles',
-          },
-        },
-      },
+      // esm
+      ...buildEsm(scssEntries),
+      // umd
+      ...buildUmd(),
     ],
-    output: {
-      target: 'web',
-      cleanDistPath: true,
-    },
     plugins: [
       pluginUnpluginVue({
         unpluginVueOptions: {

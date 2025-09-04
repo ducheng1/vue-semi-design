@@ -1,4 +1,4 @@
-.demo-button {
+.semi-button {
   cursor: pointer;
 
   display: inline-block;
@@ -10,28 +10,28 @@
   line-height: 1;
 }
 
-.demo-button--primary {
+.semi-button--primary {
   color: white;
   background-color: #1ea7fd;
 }
 
-.demo-button--secondary {
+.semi-button--secondary {
   color: #333;
   background-color: transparent;
   box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
 }
 
-.demo-button--small {
+.semi-button--small {
   padding: 10px 16px;
   font-size: 12px;
 }
 
-.demo-button--medium {
+.semi-button--medium {
   padding: 11px 20px;
   font-size: 14px;
 }
 
-.demo-button--large {
+.semi-button--large {
   padding: 12px 24px;
   font-size: 16px;
 }

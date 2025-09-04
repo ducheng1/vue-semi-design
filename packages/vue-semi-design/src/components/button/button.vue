@@ -1,37 +1,31 @@
 <script setup lang="ts">
+import type { ButtonProps } from './types'
 import { computed } from 'vue'
-import '../../styles/button.scss'
+import { bem } from '../../utils'
 
-interface Props {
-  primary?: boolean
-  tertiary?: boolean
-  backgroundColor?: string
-  size?: 'small' | 'medium' | 'large'
-  label: string
-  onClick?: () => void
-}
+defineOptions({
+  name: 'SemiButton',
+})
 
 const {
   primary = false,
   tertiary = false,
   backgroundColor = undefined,
   size = 'medium',
-  label,
-  onClick = undefined,
-} = defineProps<Props>()
+} = defineProps<ButtonProps>()
 
-const mode = computed(() => (primary ? 'demo-button--primary' : 'demo-button--secondary'))
-const isTertiary = computed(() => (tertiary ? 'demo-button--tertiary' : ''))
+const baseClass = bem('button')
+
+const mode = computed(() => (primary ? 'semi-button--primary' : 'semi-button--secondary'))
+const isTertiary = computed(() => (tertiary ? 'semi-button--tertiary' : ''))
 </script>
 
 <template>
   <button
     type="button"
-    class="demo-button"
-    :class="[`demo-button--${size}`, mode, isTertiary]"
+    :class="[baseClass(), `semi-button--${size}`, mode, isTertiary]"
     :style="{ backgroundColor }"
-    @click="onClick"
   >
-    {{ label }}
+    <slot></slot>
   </button>
 </template>

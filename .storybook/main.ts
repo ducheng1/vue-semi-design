@@ -20,11 +20,7 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: getAbsolutePath('storybook-vue3-rsbuild') as 'storybook-vue3-rsbuild',
-    options: {
-      builder: {
-        // rsbuildConfigPath: '../packages/vue-semi-design/rslib.config.ts',
-      },
-    },
+    options: {},
   },
   typescript: {
     check: true,

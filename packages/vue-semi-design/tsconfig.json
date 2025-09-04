@@ -16,10 +16,9 @@
     "noUnusedParameters": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    // "outDir": "dist/es",
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src", "types"],
+  "include": ["src/**/*.ts", "src/**/*.vue", "types/**/*.ts"],
   "exclude": ["**/stories/**", "**/tests/**"]
 }
