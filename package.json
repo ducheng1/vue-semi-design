@@ -3,22 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.15.0",
-  "description": "Vue3 component library in semi design style",
+  "description": "vue semi design monorepo",
   "author": {
     "name": "ducheng1",
     "email": "w729567588@163.com"
   },
   "license": "MIT",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "engines": {
     "node": ">=22",
     "pnpm": ">=10"
@@ -32,7 +22,7 @@
     "lint:code": "eslint . --fix --cache --cache-location=node_modules/.cache/eslint/",
     "lint:style": "stylelint **/*.{scss,vue} --fix --cache --cache-location=node_modules/.cache/stylelint/",
     "test": "vitest run",
-    "commit": "git add . && git-cz",
+    "commit": "git-cz",
     "preinstall": "npx only-allow pnpm",
     "commitlint": "commitlint --edit",
     "prepare": "husky",
