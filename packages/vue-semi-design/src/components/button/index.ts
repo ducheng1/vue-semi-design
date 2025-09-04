@@ -1,13 +1,13 @@
 import type { App } from 'vue'
 import type { ComponentWithInstall } from '../../utils'
 import type { ButtonProps } from './types'
-import Button from './button.vue'
+import SemiButton from './button.vue'
 
-Button.install = (app: App) => {
-  app.component(Button.name as string, Button)
+SemiButton.install = (app: App) => {
+  app.component(SemiButton.name as string, SemiButton)
   return app
 }
 
-export default Button as ComponentWithInstall<typeof Button>
+export default SemiButton as ComponentWithInstall<typeof SemiButton>
 
 export type { ButtonProps }

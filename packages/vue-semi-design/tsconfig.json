@@ -20,6 +20,6 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "types/**/*.ts"],
+  "include": ["src", "types"],
   "exclude": ["**/stories/**", "**/tests/**"]
 }
