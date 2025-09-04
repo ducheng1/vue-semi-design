@@ -9,6 +9,14 @@
     "email": "w729567588@163.com"
   },
   "license": "MIT",
+  "homepage": "https://semi.dcwedu.top",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducheng1/vue-semi-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ducheng1/vue-semi-design/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/es/index.d.ts",

@@ -1,0 +1,147 @@
+@use '../utils/bem' as *;
+@use '../utils/constants' as *;
+@use '../utils/mixin' as *;
+
+$types: primary, secondary, tertiary, info, warning, danger;
+
+@include b(button) {
+  @include base-style;
+  @include inline-flex-c;
+
+  cursor: pointer;
+  user-select: none;
+
+  height: var(--#{$namespace}-height-control-default);
+  padding: 6px var(--#{$namespace}-spacing-base-tight);
+  border-radius: var(--#{$namespace}-border-radius-small);
+
+  & + & {
+    margin-left: var(--#{$namespace}-spacing-tight);
+  }
+
+  @include e(content) {
+    @include inline-flex-c;
+
+    font-size: var(--#{$namespace}-font-size-regular);
+    line-height: var(--#{$namespace}-line-height);
+  }
+
+  @each $type in $types {
+    @include m($type) {
+      // 浅色
+      &#{m('light')} {
+        color: var(--#{$namespace}-color-#{$type});
+        background-color: var(--#{$namespace}-color-fill-0);
+
+        &:hover {
+          background-color: var(--#{$namespace}-color-fill-1);
+        }
+
+        &:active {
+          background-color: var(--#{$namespace}-color-fill-2);
+        }
+      }
+
+      // 深色
+      &#{m('solid')} {
+        color: white;
+        background-color: var(--#{$namespace}-color-#{$type});
+
+        &:hover {
+          background-color: var(--#{$namespace}-color-#{$type}-hover);
+        }
+
+        &:active {
+          background-color: var(--#{$namespace}-color-#{$type}-active);
+        }
+      }
+
+      // 无背景
+      &#{m('borderless')} {
+        color: var(--#{$namespace}-color-#{$type});
+
+        &:hover {
+          background-color: var(--#{$namespace}-color-fill-0);
+        }
+
+        &:active {
+          background-color: var(--#{$namespace}-color-fill-1);
+        }
+      }
+
+      // 边框
+      &#{m('outline')} {
+        @if $type == 'warning' {
+          border: var(--#{$namespace}-border-thickness-control)
+            solid
+            var(--#{$namespace}-color-warning);
+        } @else if $type == 'danger' {
+          border: var(--#{$namespace}-border-thickness-control)
+            solid
+            var(--#{$namespace}-color-danger);
+        } @else {
+          border: var(--#{$namespace}-border-thickness-control)
+            solid
+            var(--#{$namespace}-color-border);
+        }
+
+        color: var(--#{$namespace}-color-#{$type});
+
+        &:hover {
+          background-color: var(--#{$namespace}-color-fill-0);
+        }
+
+        &:active {
+          background-color: var(--#{$namespace}-color-fill-1);
+        }
+      }
+    }
+  }
+
+  // 禁用
+  @include m(disabled) {
+    cursor: not-allowed;
+    color: var(--#{$namespace}-color-text-disabled);
+    background-color: var(--#{$namespace}-color-fill-0);
+
+    &#{m('solid')} {
+      background-color: var(--#{$namespace}-color-bg-disabled);
+
+      &:hover {
+        background-color: var(--#{$namespace}-color-bg-disabled);
+      }
+
+      &:active {
+        background-color: var(--#{$namespace}-color-bg-disabled);
+      }
+    }
+
+    &#{m('light')} {
+      background-color: var(--#{$namespace}-color-fill-0);
+    }
+
+    &#{m('borderless')} {
+      background-color: transparent;
+    }
+  }
+
+  // 尺寸
+  // 大尺寸
+  @include m('large') {
+    height: var(--#{$namespace}-height-control-large);
+    padding: 10px var(--#{$namespace}-spacing-base);
+  }
+
+  // 小尺寸
+  @include m('small') {
+    height: var(--#{$namespace}-height-control-small);
+    padding: var(--#{$namespace}-spacing-super-tight) var(--#{$namespace}-spacing-base-tight);
+  }
+
+  // 块状
+  @include m('block') {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 // common
-@use './common/theme';
-@use './common/vars';
+@use './default-theme';
+@use './tokens/vars';
 
 // components
-@use './button';
+@use './components/button';

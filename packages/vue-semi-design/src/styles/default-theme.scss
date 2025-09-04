@@ -1,9 +1,89 @@
-@use './constants' as *;
-@use '../theme/light-theme' as light-theme;
-@use '../theme/dark-theme' as dark-theme;
+@use './utils/constants' as *;
+@use './theme/light-theme' as light-theme;
+@use './theme/dark-theme' as dark-theme;
+@use './tokens/vars';
 
 // 亮色模式
 body {
+  // 字体
+  --#{$namespace}-font-family-regular: #{vars.$font-family-regular};
+
+  // 行高
+  --#{$namespace}-line-height: #{vars.$line-height};
+
+  // 字重
+  --#{$namespace}-font-weight-regular: #{vars.$font-weight-regular};
+  --#{$namespace}-font-weight-bold: #{vars.$font-weight-bold};
+
+  // 字号
+  --#{$namespace}-font-size-small: #{vars.$font-size-small};
+  --#{$namespace}-font-size-regular: #{vars.$font-size-regular};
+  --#{$namespace}-font-size-header-6: #{vars.$font-size-header-6};
+  --#{$namespace}-font-size-header-5: #{vars.$font-size-header-5};
+  --#{$namespace}-font-size-header-4: #{vars.$font-size-header-4};
+  --#{$namespace}-font-size-header-3: #{vars.$font-size-header-3};
+  --#{$namespace}-font-size-header-2: #{vars.$font-size-header-2};
+  --#{$namespace}-font-size-header-1: #{vars.$font-size-header-1};
+
+  // 正在拖拽中的元素的 z-index，需要高于所有的弹出层组件 z-index
+  --#{$namespace}-z-transfer-right-item-drag-item-move: #{vars.$z-transfer-right-item-drag-item-move}; // 穿梭框右侧面板中正在拖拽元素的z-index
+  --#{$namespace}-z-tag-input-drag-item-move: #{vars.$z-tag-input-drag-item-move}; // 标签输入框中正在拖拽元素的z-index
+  --#{$namespace}-z-resizable-handler: #{vars.$z-resizable-handler}; // 伸缩框组件中handler的z-index
+  --#{$namespace}-z-toast: #{vars.$z-toast}; // toast 组件 z-index
+  --#{$namespace}-z-notification: #{vars.$z-notification}; // notification 组件 z-index
+  --#{$namespace}-z-popover: #{vars.$z-popover}; // popover 组件 z-index
+  --#{$namespace}-z-dropdown: #{vars.$z-dropdown}; // dropdown 组件 z-index
+  --#{$namespace}-z-tooltip: #{vars.$z-tooltip}; // tooltip 组件 z-index
+  --#{$namespace}-z-image-preview: #{vars.$z-image-preview}; // Image 组件预览层z-index
+  --#{$namespace}-z-image-preview-header: #{vars.$z-image-preview-header}; // Image 组件预览层中 header 部分 z-index
+  // z-index
+  --#{$namespace}-z-portal: #{vars.$z-portal}; // 抽象插槽，适用于未经特殊定制的所有组件
+  --#{$namespace}-z-affix: #{vars.$z-affix}; // 固定位置的页面元素 z-index
+  --#{$namespace}-z-backtop: #{vars.$z-backtop}; // 返回顶部 z-index
+  --#{$namespace}-z-badge: #{vars.$z-badge}; // badge z-index
+  // $z-avatar-default: 100;
+  --#{$namespace}-z-table-fixed: #{vars.$z-table-fixed}; // table fixed column
+  --#{$namespace}-z-modal: #{vars.$z-modal}; // modal z-index
+  --#{$namespace}-z-modal-mask: #{vars.$z-modal-mask}; // modal 遮罩 z-index
+  // $z-resizable-background: 2010; // 伸缩框组件中背景的z-index
+
+  // 边框宽度
+  --#{$namespace}-border-thickness: #{vars.$border-thickness}; // 描边宽度 - 零
+  --#{$namespace}-border-thickness-control: #{vars.$border-thickness-control}; // 描边宽度 - 默认状态（checkbox 等）
+  --#{$namespace}-border-thickness-control-focus: #{vars.$border-thickness-control-focus}; // 描边宽度 - focus 状态（checkbox 等）
+
+  // 图标尺寸
+  --#{$namespace}-width-icon-extra-small: #{vars.$width-icon-extra-small}; // 图标尺寸 - 超小
+  --#{$namespace}-width-icon-small: #{vars.$width-icon-small}; // 图标尺寸 - 小
+  --#{$namespace}-width-icon-medium: #{vars.$width-icon-medium}; // 图标尺寸 - 中
+  --#{$namespace}-width-icon-large: #{vars.$width-icon-large}; // 图标尺寸 - 大
+  --#{$namespace}-width-icon-extra-large: #{vars.$width-icon-extra-large}; // 图标尺寸 - 超大
+
+  /* spacing */
+  --#{$namespace}-spacing-none: #{vars.$spacing-none};
+  --#{$namespace}-spacing-super-tight: #{vars.$spacing-super-tight};
+  --#{$namespace}-spacing-extra-tight: #{vars.$spacing-extra-tight};
+  --#{$namespace}-spacing-tight: #{vars.$spacing-tight};
+  --#{$namespace}-spacing-base-tight: #{vars.$spacing-base-tight};
+  --#{$namespace}-spacing-base: #{vars.$spacing-base};
+  --#{$namespace}-spacing-base-loose: #{vars.$spacing-base-loose};
+  --#{$namespace}-spacing-loose: #{vars.$spacing-loose};
+  --#{$namespace}-spacing-extra-loose: #{vars.$spacing-extra-loose};
+  --#{$namespace}-spacing-super-loose: #{vars.$spacing-super-loose};
+
+  // 圆角
+  --#{$namespace}-border-radius-extra-small: #{vars.$border-radius-extra-small};
+  --#{$namespace}-border-radius-small: #{vars.$border-radius-small};
+  --#{$namespace}-border-radius-medium: #{vars.$border-radius-medium};
+  --#{$namespace}-border-radius-large: #{vars.$border-radius-large};
+  --#{$namespace}-border-radius-circle: #{vars.$border-radius-circle};
+  --#{$namespace}-border-radius-full: #{vars.$border-radius-full};
+
+  /* sizing */
+  --#{$namespace}-height-control-small: #{vars.$height-control-small};
+  --#{$namespace}-height-control-default: #{vars.$height-control-default};
+  --#{$namespace}-height-control-large: #{vars.$height-control-large};
+
   // 主色系列
   --#{$namespace}-color-primary: #{light-theme.$primary};
   --#{$namespace}-color-primary-hover: #{light-theme.$primary-hover};
@@ -117,7 +197,15 @@ body {
   --#{$namespace}-color-shadow: #{light-theme.$shadow};
 
   // 阴影效果
+  --#{$namespace}-shadow-0: #{light-theme.$shadow-0};
+  --#{$namespace}-shadow-1: #{light-theme.$shadow-1};
+  --#{$namespace}-shadow-2: #{light-theme.$shadow-2};
+  --#{$namespace}-shadow-knob: #{light-theme.$shadow-knob};
   --#{$namespace}-shadow-elevated: #{light-theme.$shadow-elevated};
+
+  font-family: var(--#{$namespace}-font-family-regular);
+  font-size: var(--#{$namespace}-font-size-regular);
+  line-height: var(--#{$namespace}-line-height);
 }
 
 // 暗色模式
@@ -236,5 +324,9 @@ body[theme-mode='dark'],
   --#{$namespace}-color-shadow: #{dark-theme.$shadow};
 
   // 阴影效果
+  --#{$namespace}-shadow-0: #{dark-theme.$shadow-0};
+  --#{$namespace}-shadow-1: #{dark-theme.$shadow-1};
+  --#{$namespace}-shadow-2: #{dark-theme.$shadow-2};
+  --#{$namespace}-shadow-knob: #{dark-theme.$shadow-knob};
   --#{$namespace}-shadow-elevated: #{dark-theme.$shadow-elevated};
 }

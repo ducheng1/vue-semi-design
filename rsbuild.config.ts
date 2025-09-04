@@ -7,7 +7,7 @@ export default defineConfig({
     pluginVue(),
     pluginSass({
       sassLoaderOptions: {
-        additionalData: `@use "vue-semi-design/styles/common/theme.css";`,
+        additionalData: `@use "vue-semi-design/styles/default-theme.css";`,
       },
     }),
   ],

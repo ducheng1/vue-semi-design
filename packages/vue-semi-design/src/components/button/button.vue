@@ -8,24 +8,34 @@ defineOptions({
 })
 
 const {
-  primary = false,
-  tertiary = false,
-  backgroundColor = undefined,
-  size = 'medium',
+  type = 'primary',
+  theme = 'light',
+  size = 'default',
+  disabled,
+  block,
+  htmlType = 'button',
 } = defineProps<ButtonProps>()
 
 const b = bem('button')
 
-const mode = computed(() => (primary ? b({ primary }) : b({ secondary: true })))
-const isTertiary = computed(() => (tertiary ? b({ tertiary }) : ''))
+const className = computed<string>(() =>
+  b({
+    type: disabled ? false : type,
+    theme,
+    disabled,
+    size: size === 'default' ? false : size,
+    block,
+  }),
+)
 </script>
 
 <template>
-  <button
-    type="button"
-    :class="[b(), `semi-button--${size}`, mode, isTertiary]"
-    :style="{ backgroundColor }"
-  >
-    <slot></slot>
+  <button :type="htmlType" :class="className" :disabled>
+    <span :class="b('content')">
+      <slot />
+    </span>
+    <span v-if="$slots.icon" :class="b('icon')">
+      <slot name="icon" />
+    </span>
   </button>
 </template>

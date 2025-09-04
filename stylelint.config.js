@@ -8,5 +8,6 @@ export default {
   ],
   rules: {
     'selector-class-pattern': null,
+    'at-rule-empty-line-before': null,
   },
 }

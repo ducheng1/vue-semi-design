@@ -115,6 +115,14 @@ $fill-disabled: #{color.change(map.get($grey, 8), $alpha: 0.04)};
 $shadow: #{color.change($black, $alpha: 0.04)};
 
 // 阴影效果
+$shadow-0: none;
+$shadow-1: none;
+$shadow-2:
+  0 2px 4px rgb(255 255 255 / 14%),
+  0 0 1px rgb(0 0 0 / 16%);
+$shadow-knob:
+  0 4px 6px rgb(255 255 255 / 10%),
+  0 0 1px rgb(0 0 0 / 30%);
 $shadow-elevated:
   inset 0 0 0 1px rgb(255 255 255 / 10%),
   0 4px 14px rgb(0 0 0 / 25%);

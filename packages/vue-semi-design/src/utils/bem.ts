@@ -46,7 +46,9 @@ export function bem(componentName: string) {
           res.push(className + modifierPrefix + modifier)
         }
       } else {
-        res.push(className + modifierPrefix + value)
+        if (value) {
+          res.push(className + modifierPrefix + value)
+        }
       }
       return res
     }, [] as string[])

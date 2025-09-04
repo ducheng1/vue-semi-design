@@ -1,4 +1,5 @@
-@use '../common/constants' as c;
+@use './constants' as c;
+@use './helper';
 
 $block-class: null;
 $element-class: null;
@@ -20,9 +21,19 @@ $element-class: null;
     $current-selector: #{$current-selector + '.' + $block-class + c.$element-prefix + $el + ','};
   }
 
-  @at-root {
-    #{$current-selector} {
-      @content;
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$current-selector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$current-selector} {
+        @content;
+      }
     }
   }
 }
@@ -32,7 +43,7 @@ $element-class: null;
   $current-selector: '';
 
   @each $el in $modifier {
-    $current-selector: #{$current-selector + '.' + $block-class + c.$modifier-prefix + $el + ','};
+    $current-selector: #{$current-selector + $selector + c.$modifier-prefix + $el + ','};
   }
 
   @at-root {
@@ -40,4 +51,15 @@ $element-class: null;
       @content;
     }
   }
+}
+
+@function m($modifier) {
+  $selector: $block-class;
+  $current-selector: '';
+
+  @each $el in $modifier {
+    $current-selector: #{$current-selector + '.' + $selector + c.$modifier-prefix + $el + ','};
+  }
+
+  @return $current-selector;
 }
