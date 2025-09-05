@@ -11,6 +11,8 @@ body:
     options:
     - label: I have searched the existing issues
       required: true
+  validations:
+    required: true
 - type: input
   attributes:
     label: Environment
@@ -23,32 +25,32 @@ body:
         - OS:
         - Browser:
       render: markdown
-      validations:
-        required: false
+  validations:
+    required: false
 - type: input
   attributes:
     label: Which component(s)
     description: Please describe which component(s) the bug affects.
-    validations:
-      required: false
+  validations:
+    required: false
 - type: input
   attributes:
     label: Library version
     description: Which version you are using.
-    validations:
-      required: true
+  validations:
+    required: true
 - type: textarea
   attributes:
     label: Current Behavior
     description: What is the current behavior?
-    validations:
-      required: false
+  validations:
+    required: false
 - type: textarea
   attributes:
     label: Expected Behavior
     description: What should happen?
-    validations:
-      required: false
+  validations:
+    required: false
 - type: textarea
   attributes:
     label: Steps to Reproduce
@@ -58,15 +60,15 @@ body:
       2. With this config...
       3. Run '...'
       4. See error...
-    validations:
-      required: false
+  validations:
+    required: false
 - type: input
   attributes:
     label: Provide a demo link
     description: Provide a link to a demo if possible.
     placeholder: https://codesandbox.io/s/...
-    validations:
-      required: false
+  validations:
+    required: false
 - type: textarea
   attributes:
     label: Additional information
