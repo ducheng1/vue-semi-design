@@ -15,7 +15,7 @@ export default antfu(
       css: false,
       markdown: true,
     },
-    ignores: ['node_modules', 'dist', 'pnpm-lock.yaml'],
+    ignores: ['node_modules', 'dist', 'pnpm-lock.yaml', '.github'],
   },
   {
     files: ['**/*.vue'],

@@ -66,7 +66,7 @@
     "eslint.config.js": "commitlint.config.js, prettier.config.js, stylelint.config.js, lint-staged.config.js, .prettierignore, .stylelintignore, .editorconfig",
     ".npmrc": ".node-version, .nvmrc",
     "vitest.config.js": "vitest.setup.js",
-    "README.md": "CHANGELOG.md, README.*.md, LICENSE"
+    "README.md": "CHANGELOG.md, README.*.md, LICENSE, CONTRIBUTE.md, CONTRIBUTE.*.md"
   },
 
   "typescript.tsdk": "${workspaceFolder}/node_modules/typescript/lib"
