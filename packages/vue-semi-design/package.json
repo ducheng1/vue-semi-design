@@ -41,7 +41,6 @@
   "scripts": {
     "dev": "pnpm run clean && rslib build --watch",
     "build": "pnpm run clean && rslib build && vue-tsc",
-    "publish": "npm publish",
     "prepublish": "pnpm run build",
     "clean": "rimraf dist"
   },
