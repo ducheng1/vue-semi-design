@@ -1,41 +1,30 @@
 import type { LibConfig } from '@rslib/core'
 import { pluginSass } from '@rsbuild/plugin-sass'
 import { defineConfig } from '@rslib/core'
+import autoprefixer from 'autoprefixer'
+import cssnano from 'cssnano'
 import { glob } from 'glob'
 import { pluginUnpluginVue } from 'rsbuild-plugin-unplugin-vue'
-import * as sass from 'sass'
+import version from './src/version'
 
-function buildEsm(styleEntry: Record<string, string>): LibConfig[] {
+const banner = `/* vue-semi-design ${version} */`
+
+// build styles
+function buildStyle(styleEntry: Record<string, string>): LibConfig[] {
   return [
-    // build vue and ts
     {
-      bundle: false,
-      dts: true,
-      format: 'esm',
-      source: {
-        entry: {
-          index: ['./src/**/*', '!**/*.stories.ts', '!./src/styles/**/*'],
-        },
+      banner: {
+        css: banner,
       },
-      output: {
-        target: 'web',
-        cleanDistPath: true,
-        distPath: {
-          root: './dist/es',
-        },
-      },
-    },
-    // build styles
-    {
       bundle: false,
       source: {
         entry: styleEntry,
       },
       output: {
         target: 'web',
-        cleanDistPath: true,
+        sourceMap: true,
         distPath: {
-          root: './dist/styles',
+          root: './dist/es/styles',
         },
         copy: [
           {
@@ -47,36 +36,85 @@ function buildEsm(styleEntry: Record<string, string>): LibConfig[] {
             },
           },
         ],
+        minify: {
+          css: true,
+          cssOptions: {
+            removeUnusedLocalIdents: true,
+          },
+        },
+      },
+      tools: {
+        postcss: {
+          postcssOptions: {
+            plugins: [autoprefixer(), cssnano()],
+          },
+        },
       },
     },
   ]
 }
 
-function buildUmd(): LibConfig[] {
+// build vue and ts in esm format
+function buildEsm(): LibConfig[] {
   return [
-    // js
     {
-      bundle: true,
-      dts: false,
-      format: 'umd',
+      banner: {
+        js: banner,
+        dts: banner,
+      },
+      bundle: false,
+      dts: true,
+      format: 'esm',
+      source: {
+        entry: {
+          index: ['./src/**/*', '!**/*.stories.ts', '!./src/styles/**/*'],
+        },
+        transformImport: [
+          {
+            libraryName: 'vue-semi-design',
+            style: true,
+            styleLibraryDirectory: 'styles',
+          },
+        ],
+      },
       output: {
         target: 'web',
-        cleanDistPath: true,
+        sourceMap: true,
         distPath: {
-          root: './dist/umd',
+          root: './dist/es',
         },
       },
     },
+  ]
+}
+
+// build umd for library
+function buildUmd(): LibConfig[] {
+  return [
+    // minified
     {
+      banner: {
+        css: banner,
+        js: banner,
+      },
+      umdName: 'VueSemiDesign',
       bundle: true,
+      dts: false,
       source: {
         entry: {
-          index: './src/styles/index.scss',
+          index: ['./src/styles/index.scss', './src/index.ts'],
         },
       },
+      format: 'umd',
       output: {
+        externals: {
+          vue: 'Vue',
+        },
+        filename: {
+          js: 'index.full.min.js',
+        },
         target: 'web',
-        cleanDistPath: true,
+        sourceMap: true,
         distPath: {
           root: './dist/umd',
         },
@@ -84,6 +122,53 @@ function buildUmd(): LibConfig[] {
           css: true,
           cssOptions: {
             removeUnusedLocalIdents: true,
+          },
+        },
+      },
+    },
+    // not minified
+    {
+      banner: {
+        js: banner,
+      },
+      umdName: 'VueSemiDesign',
+      bundle: true,
+      dts: false,
+      source: {
+        entry: {
+          index: './src/index.ts',
+        },
+      },
+      format: 'umd',
+      output: {
+        externals: {
+          vue: 'Vue',
+        },
+        filename: {
+          js: 'index.full.js',
+        },
+        target: 'web',
+        sourceMap: true,
+        distPath: {
+          root: './dist/umd',
+        },
+        minify: {
+          js: true,
+          jsOptions: {
+            minimizerOptions: {
+              mangle: false,
+              minify: false,
+              compress: {
+                defaults: true,
+                unused: true,
+                dead_code: true,
+                toplevel: true,
+              },
+              format: {
+                comments: 'some',
+                preserve_annotations: true,
+              },
+            },
           },
         },
       },
@@ -106,25 +191,13 @@ export default defineConfig(async () => {
 
   return {
     lib: [
+      // style
+      ...buildStyle(scssEntries),
       // esm
-      ...buildEsm(scssEntries),
+      ...buildEsm(),
       // umd
       ...buildUmd(),
     ],
-    plugins: [
-      pluginUnpluginVue({
-        unpluginVueOptions: {
-          style: {
-            preprocessLang: 'scss',
-          },
-        },
-      }),
-      pluginSass({
-        sassLoaderOptions: {
-          implementation: sass,
-          sourceMap: true,
-        },
-      }),
-    ],
+    plugins: [pluginUnpluginVue(), pluginSass()],
   }
 })

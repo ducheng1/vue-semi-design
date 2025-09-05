@@ -17,8 +17,8 @@
     "dev": "npm-run-all -p dev:*",
     "dev:lib": "pnpm run --filter vue-semi-design dev",
     "dev:storybook": "storybook dev -p 5610 --no-open",
-    "build": "pnpm run --filter vue-semi-design build",
-    "lint": "npm-run-all -s lint:*",
+    "build": "pnpm run lint && pnpm run --filter vue-semi-design build",
+    "lint": "npm-run-all -p lint:*",
     "lint:code": "eslint . --fix --cache --cache-location=node_modules/.cache/eslint/",
     "lint:style": "stylelint **/*.{scss,vue} --fix --cache --cache-location=node_modules/.cache/stylelint/",
     "test": "vitest run",
@@ -27,8 +27,7 @@
     "commitlint": "commitlint --edit",
     "prepare": "husky",
     "depcheck": "pnpx taze major -wIr",
-    "clean": "node ./scripts/clean.js",
-    "reinstall": "node ./scripts/clean.js -p && pnpm install"
+    "reinstall": "node ./scripts/clean.js && pnpm install"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -52,7 +51,9 @@
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^6.0.1",
+    "autoprefixer": "^10.4.21",
     "commitizen": "^4.3.1",
+    "cssnano": "^7.1.1",
     "cz-git": "^1.12.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
@@ -65,6 +66,7 @@
     "npm-run-all2": "^8.0.4",
     "postcss-html": "^1.8.0",
     "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
     "rsbuild-plugin-unplugin-vue": "^0.1.0",
     "sass": "^1.92.0",
     "storybook": "^9.1.4",

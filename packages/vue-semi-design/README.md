@@ -34,7 +34,6 @@ Then import component and css
 ```vue
 <script>
 import { SemiButton } from 'vue-semi-design'
-import 'vue-semi-design/styles/components/button.css'
 </script>
 
 <template>
@@ -50,7 +49,7 @@ Or you can full import in entry file
 import { createApp } from 'vue'
 import VueSemiDesign from 'vue-semi-design'
 import App from './App.vue'
-import 'vue-semi-design/styles/default-theme.css'
+import 'vue-semi-design/styles/index.css'
 
 const app = createApp(App)
 

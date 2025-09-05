@@ -2,6 +2,7 @@
 import type { ButtonProps } from './types'
 import { computed } from 'vue'
 import { bem } from '../../utils'
+import '../../styles/components/button.scss'
 
 defineOptions({
   name: 'SemiButton',

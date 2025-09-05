@@ -2,7 +2,6 @@
   "name": "vue-semi-design",
   "type": "module",
   "version": "0.0.1-alpha.1",
-  "packageManager": "pnpm@10.15.0",
   "description": "Vue3 component library in semi design style",
   "author": {
     "name": "ducheng1",
@@ -28,24 +27,23 @@
       "types": "./dist/es/index.d.ts",
       "import": "./dist/es/index.js"
     },
-    "./styles/*": "./dist/styles/*",
+    "./styles/*": "./dist/es/styles/*",
     "./umd/*": "./dist/umd/*",
     "./es/*": "./dist/es/*"
   },
   "main": "./dist/umd/index.js",
+  "module": "./dist/es/index.js",
   "types": "./dist/es/index.d.ts",
+  "style": "./dist/umd/index.css",
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=22",
-    "pnpm": ">=10"
-  },
   "scripts": {
-    "dev": "rslib build --watch",
-    "build": "rslib build && vue-tsc",
+    "dev": "pnpm run clean && rslib build --watch",
+    "build": "pnpm run clean && rslib build && vue-tsc",
     "publish": "npm publish",
-    "prepublish": "pnpm run build"
+    "prepublish": "pnpm run build",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "vue": "^3.2.0"

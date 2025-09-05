@@ -23,10 +23,7 @@ async function removeTarget(targets, currentDir) {
 }
 
 async function cleanup() {
-  const targets = ['.turbo', 'dist', '.cache']
-  if (process.argv.includes('-p')) {
-    targets.push('node_modules', 'pnpm-lock.yaml')
-  }
+  const targets = ['dist', '.cache', 'node_modules', 'pnpm-lock.yaml']
   console.log(chalk.blue(`Start cleanup workspace, targets: ${targets.join(', ')}`))
   try {
     const rootDir = path.dirname('..')
