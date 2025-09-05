@@ -1,0 +1,30 @@
+{
+  "name": "@vue-semi-design/docs",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "vue semi design icons",
+  "author": {
+    "name": "ducheng1",
+    "email": "w729567588@163.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ducheng1/vue-semi-design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducheng1/vue-semi-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ducheng1/vue-semi-design/issues"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "pnpm run clean && vitepress build",
+    "preview": "vitepress preview",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.4",
+    "vue-semi-design": "workspace:*"
+  }
+}

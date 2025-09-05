@@ -3,7 +3,9 @@ import { resolve } from 'node:path'
 import process from 'node:process'
 import { defineConfig } from 'cz-git'
 
-const scopes = readdirSync(resolve(process.cwd(), 'packages'))
+const scopes = readdirSync(resolve(process.cwd(), 'packages')).map((item) =>
+  item === 'vue-semi-design' ? item : item.replace('vue-semi-design-', ''),
+)
 
 export default defineConfig({
   extends: ['@commitlint/config-conventional'],
