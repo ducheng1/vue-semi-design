@@ -9,5 +9,6 @@ export default {
   rules: {
     'selector-class-pattern': null,
     'at-rule-empty-line-before': null,
+    'no-duplicate-selectors': null,
   },
 }

@@ -14,11 +14,11 @@
     "pnpm": ">=10"
   },
   "scripts": {
-    "dev": "npm-run-all -p dev:*",
-    "dev:lib": "pnpm run --filter vue-semi-design dev",
+    "dev": "turbo run dev & pnpm run dev:storybook",
     "dev:storybook": "storybook dev -p 5610 --no-open",
-    "build": "pnpm run lint && pnpm run --filter vue-semi-design build",
-    "lint": "npm-run-all -p lint:*",
+    "build": "turbo run build",
+    "lint": "pnpm run lint:all && turbo run lint",
+    "lint:all": "npm-run-all -p lint:code lint:style",
     "lint:code": "eslint . --fix --cache --cache-location=node_modules/.cache/eslint/",
     "lint:style": "stylelint **/*.{scss,vue} --fix --cache --cache-location=node_modules/.cache/stylelint/",
     "test": "vitest run",
@@ -76,6 +76,7 @@
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-prettier": "^5.0.3",
+    "turbo": "^2.5.6",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4",
     "vue": "^3.5.21",
