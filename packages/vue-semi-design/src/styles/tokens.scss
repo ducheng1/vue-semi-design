@@ -1,0 +1,107 @@
+@use './tokens/light';
+@use './tokens/dark';
+@use 'sass:map';
+
+:root {
+  @for $i from 1 through 10 {
+    --red-#{$i}: #{map.get(light.$red, $i)};
+  }
+  @for $i from 1 through 10 {
+    --pink-#{$i}: #{map.get(light.$pink, $i)};
+  }
+  @for $i from 1 through 10 {
+    --purple-#{$i}: #{map.get(light.$purple, $i)};
+  }
+  @for $i from 1 through 10 {
+    --violet-#{$i}: #{map.get(light.$violet, $i)};
+  }
+  @for $i from 1 through 10 {
+    --indigo-#{$i}: #{map.get(light.$indigo, $i)};
+  }
+  @for $i from 1 through 10 {
+    --blue-#{$i}: #{map.get(light.$blue, $i)};
+  }
+  @for $i from 1 through 10 {
+    --light-blue-#{$i}: #{map.get(light.$light-blue, $i)};
+  }
+  @for $i from 1 through 10 {
+    --cyan-#{$i}: #{map.get(light.$cyan, $i)};
+  }
+  @for $i from 1 through 10 {
+    --teal-#{$i}: #{map.get(light.$teal, $i)};
+  }
+  @for $i from 1 through 10 {
+    --green-#{$i}: #{map.get(light.$green, $i)};
+  }
+  @for $i from 1 through 10 {
+    --light-green-#{$i}: #{map.get(light.$light-green, $i)};
+  }
+  @for $i from 1 through 10 {
+    --lime-#{$i}: #{map.get(light.$lime, $i)};
+  }
+  @for $i from 1 through 10 {
+    --yellow-#{$i}: #{map.get(light.$yellow, $i)};
+  }
+  @for $i from 1 through 10 {
+    --amber-#{$i}: #{map.get(light.$amber, $i)};
+  }
+  @for $i from 1 through 10 {
+    --orange-#{$i}: #{map.get(light.$orange, $i)};
+  }
+  @for $i from 1 through 10 {
+    --grey-#{$i}: #{map.get(light.$grey, $i)};
+  }
+}
+
+// 暗色模式
+:root[theme-mode='dark'],
+:root.dark {
+  @for $i from 1 through 10 {
+    --red-#{$i}: #{map.get(dark.$red, $i)};
+  }
+  @for $i from 1 through 10 {
+    --pink-#{$i}: #{map.get(dark.$pink, $i)};
+  }
+  @for $i from 1 through 10 {
+    --purple-#{$i}: #{map.get(dark.$purple, $i)};
+  }
+  @for $i from 1 through 10 {
+    --violet-#{$i}: #{map.get(dark.$violet, $i)};
+  }
+  @for $i from 1 through 10 {
+    --indigo-#{$i}: #{map.get(dark.$indigo, $i)};
+  }
+  @for $i from 1 through 10 {
+    --blue-#{$i}: #{map.get(dark.$blue, $i)};
+  }
+  @for $i from 1 through 10 {
+    --dark-blue-#{$i}: #{map.get(dark.$light-blue, $i)};
+  }
+  @for $i from 1 through 10 {
+    --cyan-#{$i}: #{map.get(dark.$cyan, $i)};
+  }
+  @for $i from 1 through 10 {
+    --teal-#{$i}: #{map.get(dark.$teal, $i)};
+  }
+  @for $i from 1 through 10 {
+    --green-#{$i}: #{map.get(dark.$green, $i)};
+  }
+  @for $i from 1 through 10 {
+    --dark-green-#{$i}: #{map.get(dark.$light-green, $i)};
+  }
+  @for $i from 1 through 10 {
+    --lime-#{$i}: #{map.get(dark.$lime, $i)};
+  }
+  @for $i from 1 through 10 {
+    --yellow-#{$i}: #{map.get(dark.$yellow, $i)};
+  }
+  @for $i from 1 through 10 {
+    --amber-#{$i}: #{map.get(dark.$amber, $i)};
+  }
+  @for $i from 1 through 10 {
+    --orange-#{$i}: #{map.get(dark.$orange, $i)};
+  }
+  @for $i from 1 through 10 {
+    --grey-#{$i}: #{map.get(dark.$grey, $i)};
+  }
+}

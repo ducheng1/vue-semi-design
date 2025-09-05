@@ -4,7 +4,7 @@
 @use './tokens/vars';
 
 // 亮色模式
-body {
+:root {
   // 字体
   --#{$namespace}-font-family-regular: #{vars.$font-family-regular};
 
@@ -209,8 +209,8 @@ body {
 }
 
 // 暗色模式
-body[theme-mode='dark'],
-.dark {
+:root[theme-mode='dark'],
+:root.dark {
   // 主色系列
   --#{$namespace}-color-primary: #{dark-theme.$primary};
   --#{$namespace}-color-primary-hover: #{dark-theme.$primary-hover};
