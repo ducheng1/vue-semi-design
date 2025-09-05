@@ -11,7 +11,7 @@
   "homepage": "https://github.com/ducheng1/vue-semi-design",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ducheng1/vue-semi-design.git"
+    "url": "git+https://github.com/ducheng1/vue-semi-design.git"
   },
   "bugs": {
     "url": "https://github.com/ducheng1/vue-semi-design/issues"
@@ -42,7 +42,7 @@
     "dev": "pnpm run clean && rslib build --watch",
     "build": "pnpm run clean && rslib build && vue-tsc",
     "release": "bumpp --preid alpha --tag 'v' --push",
-    "update-version": "tsx ./scripts/update-version.ts",
+    "update-version": "tsx ./scripts/update-version.ts && git add ./src/version.ts",
     "postversion": "pnpm run update-version",
     "clean": "rimraf dist"
   },

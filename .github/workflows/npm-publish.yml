@@ -28,8 +28,8 @@ jobs:
       - name: lint
         run: npm run lint
       - name: build
-        run: npm run build
+        run: cd packages/vue-semi-design && npm run build
       - name: publish
-        run: cd packages/vue-semi-design && npm publish
+        run: npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

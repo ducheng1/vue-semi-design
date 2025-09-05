@@ -28,7 +28,7 @@
     "prepare": "husky",
     "depcheck": "pnpx taze major -wIr",
     "reinstall": "node ./scripts/clean.js && pnpm install",
-    "release:lib": "pnpm run release --filter vue-semi-design"
+    "release:lib": "pnpm run --filter vue-semi-design release"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
