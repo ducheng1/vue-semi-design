@@ -1,0 +1,49 @@
+{
+  "name": "@vue-semi-design/icons",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "vue semi design icons",
+  "author": {
+    "name": "ducheng1",
+    "email": "w729567588@163.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ducheng1/vue-semi-design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ducheng1/vue-semi-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ducheng1/vue-semi-design/issues"
+  },
+  "keywords": [
+    "semi design",
+    "vue",
+    "icon library",
+    "icons"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build && vue-tsc",
+    "dev": "rslib build --watch"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@rslib/core": "^0.12.4",
+    "rsbuild-plugin-unplugin-vue": "^0.1.0",
+    "typescript": "^5.9.2",
+    "vue": "^3.5.20",
+    "vue-tsc": "^3.0.6"
+  }
+}
