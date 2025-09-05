@@ -42,7 +42,7 @@
     "dev": "pnpm run clean && rslib build --watch",
     "build": "pnpm run clean && rslib build && vue-tsc",
     "release": "bumpp --preid alpha --tag 'v' --push",
-    "update-version": "tsx ./scripts/update-version.ts && git add ./src/version.ts",
+    "update-version": "tsx ./scripts/update-version.ts && git add ./src/version.ts && git commit -m 'chore: update version'",
     "postversion": "pnpm run update-version",
     "clean": "rimraf dist"
   },
