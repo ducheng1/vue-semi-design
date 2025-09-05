@@ -30,6 +30,6 @@ jobs:
       - name: build
         run: cd packages/vue-semi-design && npm run build
       - name: publish
-        run: npm publish --access public
+        run: cd packages/vue-semi-design && npm publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
