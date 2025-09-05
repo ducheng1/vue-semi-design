@@ -9,27 +9,45 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: pull repo
-        uses: actions/checkout@v2
-      - name: node version
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+
+      - name: Add dev branch
+        run: git branch dev origin/dev
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
           node-version: 22.18.0
           registry-url: https://registry.npmjs.org
-      - name: npm cache
-        uses: actions/cache@v3
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Get pnpm store
+        id: pnpm-store
+        run: |
+          echo "pnpm_store_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
         with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-      - name: install dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: npm i -g pnpm && pnpm i
-      - name: lint
-        run: npm run lint
-      - name: build
-        run: cd packages/vue-semi-design && npm run build
-      - name: publish
+          path: ${{ steps.pnpm-store.outputs.pnpm_store_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build
+        run: cd packages/vue-semi-design && pnpm run build
+
+      - name: Publish to npm
         run: cd packages/vue-semi-design && npm publish --access public
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
