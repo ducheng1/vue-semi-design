@@ -40,8 +40,10 @@
   ],
   "scripts": {
     "dev": "pnpm run clean && rslib build --watch",
-    "build": "pnpm run clean && rslib build && vue-tsc",
-    "prepublish": "pnpm run build",
+    "build": "pnpm run clean && pnpm run update-version && rslib build && vue-tsc",
+    "bump": "bumpp --preid alpha --tag 'v'",
+    "release": "pnpm run bump && pnpm run update-version && pnpm run build && npm publish --registry=https://registry.npmjs.com/",
+    "update-version": "tsx ./scripts/update-version.ts",
     "clean": "rimraf dist"
   },
   "peerDependencies": {

@@ -27,7 +27,8 @@
     "commitlint": "commitlint --edit",
     "prepare": "husky",
     "depcheck": "pnpx taze major -wIr",
-    "reinstall": "node ./scripts/clean.js && pnpm install"
+    "reinstall": "node ./scripts/clean.js && pnpm install",
+    "release:lib": "pnpm run release --filter vue-semi-design"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -52,6 +53,7 @@
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "autoprefixer": "^10.4.21",
+    "bumpp": "^10.2.3",
     "commitizen": "^4.3.1",
     "cssnano": "^7.1.1",
     "cz-git": "^1.12.0",
@@ -76,6 +78,7 @@
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-prettier": "^5.0.3",
+    "tsx": "^4.20.5",
     "turbo": "^2.5.6",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4",
