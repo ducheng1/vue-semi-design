@@ -11,9 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add dev branch
-        run: git branch dev origin/dev
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
