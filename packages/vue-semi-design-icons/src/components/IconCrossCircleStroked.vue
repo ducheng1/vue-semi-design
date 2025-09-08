@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconCrossCircleStroked',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11m-11 9a9 9 0 1 0 0-18 9 9 0 0 0 0 18M8.111 8.11a1 1 0 0 1 1.414 0L12 10.587l2.475-2.475a1 1 0 1 1 1.414 1.414L13.414 12l2.475 2.475a1 1 0 0 1-1.414 1.414L12 13.414 9.525 15.89a1 1 0 0 1-1.414-1.414L10.586 12 8.11 9.525a1 1 0 0 1 0-1.414"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

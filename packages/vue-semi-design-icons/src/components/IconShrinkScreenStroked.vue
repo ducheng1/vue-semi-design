@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconShrinkScreenStroked',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M3.707 2.293a1 1 0 0 0-1.414 1.414L8.086 9.5H4.5a1 1 0 0 0 0 2h6.003a1 1 0 0 0 .706-.295 1 1 0 0 0 .291-.702V4.5a1 1 0 1 0-2 0v3.586zm8.869 10.824a1 1 0 0 0-.076.38V19.5a1 1 0 1 0 2 0v-3.586l5.793 5.793a1 1 0 0 0 1.414-1.414L15.914 14.5H19.5a1 1 0 1 0 0-2h-6.003a1 1 0 0 0-.697.286l-.014.014a1 1 0 0 0-.21.317"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

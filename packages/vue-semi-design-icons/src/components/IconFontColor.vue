@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconFontColor',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M13.352 1.885a1.5 1.5 0 0 0-2.704 0l-6 12.966a1.5 1.5 0 1 0 2.704 1.298l1.272-2.65h6.752l1.272 2.65a1.5 1.5 0 1 0 2.704-1.298zM12 6l1.936 4.5h-3.872zM3 18a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

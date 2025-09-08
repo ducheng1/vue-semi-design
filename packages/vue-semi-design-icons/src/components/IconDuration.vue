@@ -1,0 +1,16 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconDuration',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11m7.857-11A7.857 7.857 0 0 1 6.39 17.5L12 12V4.143A7.857 7.857 0 0 1 19.857 12"
+    />
+  </svg>
+</template>

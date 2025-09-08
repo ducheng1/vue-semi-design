@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconBytedanceLogo',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M18.605 3 22 3.869v15.638l-3.395.993zM2 3.993l3.333.807v13.9L2 19.631zm5.494 6.95 3.333.931v7.26l-3.333.932zm8.95-2.234-3.271.807v7.323l3.271.993z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

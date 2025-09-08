@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconConnectionPoint1',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M1 3a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7.5v4A1.5 1.5 0 0 0 9 16.5h4V15a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-1.5H9A4.5 4.5 0 0 1 4.5 15v-4H3a2 2 0 0 1-2-2z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

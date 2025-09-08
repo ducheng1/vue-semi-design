@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconTopLeftStroked',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M3 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V4h17a1 1 0 1 0 0-2zm8 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1zm1 10v-8h8v8z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

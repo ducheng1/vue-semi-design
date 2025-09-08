@@ -1,0 +1,24 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconVersionStroked',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M5.125 3.125v17.027l6.358-3.288c.324-.167.71-.167 1.034 0l6.358 3.288V3.125zM2.875 3C2.875 1.826 3.826.875 5 .875h14c1.174 0 2.125.951 2.125 2.125v19a1.125 1.125 0 0 1-1.642 1L12 19.13 4.517 23a1.125 1.125 0 0 1-1.642-1z"
+      clip-rule="evenodd"
+    />
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M6.875 9c0-.621.504-1.125 1.125-1.125h8a1.125 1.125 0 0 1 0 2.25H8A1.125 1.125 0 0 1 6.875 9"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

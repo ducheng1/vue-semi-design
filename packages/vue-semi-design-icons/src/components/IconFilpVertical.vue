@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconFilpVertical',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M20.875 10.875a1.25 1.25 0 0 0 .444-2.418L3.57 1.707a1.25 1.25 0 0 0-1.694 1.168v6.75c0 .69.56 1.25 1.25 1.25zm-16.5-2.5V4.688l9.696 3.687zm17.73 5.524a1.25 1.25 0 0 0-1.23-1.024H3.125c-.69 0-1.25.56-1.25 1.25v6.75a1.25 1.25 0 0 0 1.694 1.168l17.75-6.75a1.25 1.25 0 0 0 .785-1.394"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

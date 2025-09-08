@@ -16,10 +16,10 @@
     "noUnusedParameters": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist",
+    "outDir": "dist/es",
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["src"],
+  "include": ["src", "types"],
   "exclude": ["node_modules", "dist", ".turbo"]
 }

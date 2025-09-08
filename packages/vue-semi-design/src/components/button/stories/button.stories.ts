@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import Button from '..'
-import '../../../styles/components/button.scss'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
@@ -154,5 +153,12 @@ export const Block: Story = {
   name: '块状',
   args: {
     block: true,
+  },
+}
+
+export const Loading: Story = {
+  name: '加载态',
+  args: {
+    loading: true,
   },
 }

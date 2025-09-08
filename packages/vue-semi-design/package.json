@@ -42,12 +42,15 @@
     "dev": "pnpm run clean && rslib build --watch",
     "build": "pnpm run clean && rslib build && vue-tsc",
     "release": "bumpp --preid alpha --tag 'v' --push",
-    "update-version": "tsx ./scripts/update-version.ts && git add ./src/version.ts && git commit -m 'chore: update version'",
-    "postversion": "pnpm run update-version",
+    "update-version": "tsx ../../scripts/update-version.ts",
+    "postversion": "pnpm run update-version && git add ./src/version.ts && git commit -m 'chore: update version'",
     "clean": "rimraf dist"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@vue-semi-design/icons": "workspace:*"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.5.3",

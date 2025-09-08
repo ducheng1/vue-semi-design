@@ -28,7 +28,10 @@
     "prepare": "husky",
     "depcheck": "pnpx taze major -wIr",
     "reinstall": "node ./scripts/clean.js && pnpm install",
-    "release:lib": "pnpm run --filter vue-semi-design release"
+    "release:lib": "pnpm run --filter vue-semi-design release",
+    "release:icons": "pnpm run --filter @vue-semi-design/icons release",
+    "svg:optimize": "pnpm run --filter @vue-semi-design/icons optimize",
+    "svg:generate": "pnpm run --filter @vue-semi-design/icons generate && pnpm lint:code"
   },
   "peerDependencies": {
     "vue": "^3.2.0"

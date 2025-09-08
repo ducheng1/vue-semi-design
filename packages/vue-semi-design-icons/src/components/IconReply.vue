@@ -1,0 +1,16 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconReply',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      d="m2.275 11.31 8.073-8.499c.619-.652 1.713-.211 1.713.69v4.002C19.022 7.503 23 12 23 17.996c0 .5-.241 2.18-.556 2.316-.137.06-.288-.014-.438-.317-2.224-4.47-4.475-4.497-9.945-4.497v5c0 .902-1.094 1.343-1.713.69L2.274 12.69a1.003 1.003 0 0 1 0-1.38"
+    />
+  </svg>
+</template>

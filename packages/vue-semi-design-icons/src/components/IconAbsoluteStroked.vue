@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconAbsoluteStroked',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M13.621 5.036a1 1 0 1 0 1.415-1.415l-2.329-2.328a1 1 0 0 0-1.414 0L8.964 3.62a1 1 0 0 0 1.415 1.415l.62-.622V11H4.415l.622-.622A1 1 0 1 0 3.62 8.964l-2.328 2.329a1 1 0 0 0 0 1.414l2.328 2.328a1 1 0 0 0 1.415-1.414L4.414 13H11v6.586l-.622-.621a1 1 0 0 0-1.414 1.414l2.329 2.328a1 1 0 0 0 1.414 0l2.328-2.328a1 1 0 0 0-1.414-1.414l-.621.62V13h6.585l-.62.62a1 1 0 0 0 1.413 1.415l2.329-2.328a1 1 0 0 0 0-1.415l-2.329-2.328a1 1 0 1 0-1.414 1.414l.622.622H13V4.414z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

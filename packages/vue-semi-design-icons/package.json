@@ -24,24 +24,40 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.js"
+    },
+    "./umd/*": "./dist/umd/*",
+    "./es/*": "./dist/es/*",
+    "./svg/*": "./dist/es/svg/*"
   },
-  "types": "./dist/index.d.ts",
+  "main": "./dist/umd/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
+  "style": "./dist/umd/index.css",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rslib build && vue-tsc",
-    "dev": "rslib build --watch"
+    "dev": "pnpm run clean && rslib build --watch",
+    "build": "pnpm run clean && rslib build && vue-tsc",
+    "release": "bumpp --preid alpha --tag 'icon:v' --push",
+    "update-version": "tsx ../../scripts/update-version.ts && git add ./src/version.ts && git commit -m 'chore: update version'",
+    "postversion": "pnpm run update-version",
+    "clean": "rimraf dist",
+    "optimize": "svgo -f ./src/svg -o ./src/svg",
+    "generate": "tsx ./scripts/generate.ts"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
+  "dependencies": {
+    "es-toolkit": "^1.39.10"
+  },
   "devDependencies": {
     "@rslib/core": "^0.12.4",
     "rsbuild-plugin-unplugin-vue": "^0.1.0",
+    "svgo": "^4.0.0",
     "typescript": "^5.9.2",
     "vue": "^3.5.20",
     "vue-tsc": "^3.0.6"

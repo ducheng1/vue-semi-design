@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconLikeThumb',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="m8.059 9.39 3.713-6.963c.127-.238.42-.33.64-.175.582.41 1.421 1.2 1.421 2.123 0 .5-.132 1.397-.27 2.338-.153 1.035-.313 2.122-.313 2.787h7.583C21.278 9.5 22 9.952 22 11c0 .904-.992 5.087-1.692 8.042L20 20.345c0 .218-.267.655-1.333.655H8.498A.5.5 0 0 1 8 20.5V9.625a.5.5 0 0 1 .059-.235M3.5 9.5a.5.5 0 0 0-.5.5v10.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V10a.5.5 0 0 0-.5-.5z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

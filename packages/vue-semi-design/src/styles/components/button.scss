@@ -101,10 +101,9 @@ $types: primary, secondary, tertiary, info, warning, danger;
   // 禁用
   @include m(disabled) {
     cursor: not-allowed;
-    color: var(--#{$namespace}-color-text-disabled);
-    background-color: var(--#{$namespace}-color-fill-0);
 
     &#{m('solid')} {
+      color: var(--#{$namespace}-color-text-disabled);
       background-color: var(--#{$namespace}-color-bg-disabled);
 
       &:hover {
@@ -117,11 +116,61 @@ $types: primary, secondary, tertiary, info, warning, danger;
     }
 
     &#{m('light')} {
+      color: var(--#{$namespace}-color-text-disabled);
       background-color: var(--#{$namespace}-color-fill-0);
+
+      &:hover {
+        background-color: var(--#{$namespace}-color-fill-0);
+      }
+
+      &:active {
+        background-color: var(--#{$namespace}-color-fill-0);
+      }
     }
 
     &#{m('borderless')} {
-      background-color: transparent;
+      color: var(--#{$namespace}-color-text-disabled);
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // 加载
+  @include m(loading) {
+    cursor: progress;
+
+    &#{m('solid')} {
+      color: var(--#{$namespace}-color-text-disabled);
+    }
+
+    &#{m('light')} {
+      background-color: var(--#{$namespace}-color-fill-0);
+
+      &:hover {
+        background-color: var(--#{$namespace}-color-fill-0);
+      }
+
+      &:active {
+        background-color: var(--#{$namespace}-color-fill-0);
+      }
+    }
+
+    &#{m('borderless')} {
+      color: var(--#{$namespace}-color-text-disabled);
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
     }
   }
 

@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconSearch',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path
+      fill="#000"
+      fill-rule="evenodd"
+      d="M10.5 2a8.5 8.5 0 1 0 4.856 15.477l4.083 4.084a1.5 1.5 0 1 0 2.122-2.122l-4.084-4.083A8.5 8.5 0 0 0 10.5 2M5 10.5a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0"
+      clip-rule="evenodd"
+    />
+  </svg>
+</template>

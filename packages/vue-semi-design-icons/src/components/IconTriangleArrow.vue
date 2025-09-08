@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+import { defineOptions } from 'vue'
+
+defineOptions({
+  name: 'IconIconTriangleArrow',
+})
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <g clip-path="url(#a)">
+      <path fill="#000" d="M24 9v1c-4 0-5.5 1-7.5 3S14 16 12 16s-2.5-1-4.5-3S4 10 0 10V9z" />
+    </g>
+    <defs>
+      <clipPath id="a"><path fill="#fff" d="M24 0v24H0V0z" /></clipPath>
+    </defs>
+  </svg>
+</template>
