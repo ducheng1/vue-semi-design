@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
+import { IconDelete } from '@vue-semi-design/icons'
 import Button from '..'
+import Icon from '../../icon'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
@@ -19,8 +21,10 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
+export const Default: Story = {}
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Default: Story = {
+export const Light: Story = {
   name: '浅色背景',
   render: () => ({
     components: { Button },
@@ -149,16 +153,69 @@ export const Size: Story = {
   }),
 }
 
-export const Block: Story = {
-  name: '块状',
-  args: {
-    block: true,
-  },
-}
-
 export const Loading: Story = {
   name: '加载态',
-  args: {
-    loading: true,
-  },
+  render: () => ({
+    components: { Button },
+    template: `
+      <Button theme="light" loading type="primary">加载态</Button>
+      <Button theme="solid" loading type="secondary">加载态</Button>
+      <Button theme="outline" loading type="tertiary">加载态</Button>
+      <Button theme="borderless" loading type="warning">加载态</Button>
+      <Button theme="solid" loading type="danger">加载态</Button>
+    `,
+  }),
+}
+
+export const WithIcon: Story = {
+  name: '图标按钮',
+  render: () => ({
+    components: { Button, Icon, IconDelete },
+    template: `
+      <Button theme="solid" type="danger">
+        <template #icon>
+          <Icon>
+            <IconDelete />
+          </Icon>
+        </template>
+        删除
+      </Button>
+      <Button theme="light" type="danger" icon-position="right">
+        <template #icon>
+          <Icon>
+            <IconDelete />
+          </Icon>
+        </template>
+        删除
+      </Button>
+      <Button theme="light" type="danger">
+        <template #icon>
+          <Icon>
+            <IconDelete />
+          </Icon>
+        </template>
+      </Button>
+      <Button theme="light" type="danger" disabled>
+        <template #icon>
+          <Icon>
+            <IconDelete />
+          </Icon>
+        </template>
+      </Button>
+      <Button theme="light" type="danger" size="large">
+        <template #icon>
+          <Icon>
+            <IconDelete />
+          </Icon>
+        </template>
+      </Button>
+      <Button theme="light" type="danger" size="small">
+        <template #icon>
+          <Icon>
+            <IconDelete />
+          </Icon>
+        </template>
+      </Button>
+    `,
+  }),
 }

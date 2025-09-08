@@ -1,0 +1,7 @@
+@use './constants' as *;
+
+@keyframes #{$namespace}-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

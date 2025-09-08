@@ -6,3 +6,6 @@ export type ComponentThemeType = (typeof themeList)[number]
 
 export const typeList = ['primary', 'secondary', 'tertiary', 'warning', 'danger'] as const
 export type ComponentTypeType = (typeof typeList)[number]
+
+export const iconSizeList = ['extra-small', 'small', 'default', 'large', 'extra-large'] as const
+export type IconSizeType = (typeof iconSizeList)[number]

@@ -11,9 +11,16 @@ $types: primary, secondary, tertiary, info, warning, danger;
   cursor: pointer;
   user-select: none;
 
+  gap: var(--#{$namespace}-spacing-tight);
+
   height: var(--#{$namespace}-height-control-default);
   padding: 6px var(--#{$namespace}-spacing-base-tight);
   border-radius: var(--#{$namespace}-border-radius-small);
+
+  @include m('is-icon') {
+    width: var(--#{$namespace}-height-control-default);
+    padding: 0;
+  }
 
   & + & {
     margin-left: var(--#{$namespace}-spacing-tight);
@@ -23,7 +30,10 @@ $types: primary, secondary, tertiary, info, warning, danger;
     @include inline-flex-c;
 
     font-size: var(--#{$namespace}-font-size-regular);
-    line-height: var(--#{$namespace}-line-height);
+  }
+
+  @include m(right-icon) {
+    flex-direction: row-reverse;
   }
 
   @each $type in $types {
@@ -49,10 +59,18 @@ $types: primary, secondary, tertiary, info, warning, danger;
 
         &:hover {
           background-color: var(--#{$namespace}-color-#{$type}-hover);
+
+          &#{m('loading')} {
+            background-color: var(--#{$namespace}-color-#{$type});
+          }
         }
 
         &:active {
           background-color: var(--#{$namespace}-color-#{$type}-active);
+
+          &#{m('loading')} {
+            background-color: var(--#{$namespace}-color-#{$type});
+          }
         }
       }
 
@@ -145,10 +163,6 @@ $types: primary, secondary, tertiary, info, warning, danger;
   @include m(loading) {
     cursor: progress;
 
-    &#{m('solid')} {
-      color: var(--#{$namespace}-color-text-disabled);
-    }
-
     &#{m('light')} {
       background-color: var(--#{$namespace}-color-fill-0);
 
@@ -161,9 +175,17 @@ $types: primary, secondary, tertiary, info, warning, danger;
       }
     }
 
-    &#{m('borderless')} {
-      color: var(--#{$namespace}-color-text-disabled);
+    &#{m('outline')} {
+      &:hover {
+        background-color: transparent;
+      }
 
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &#{m('borderless')} {
       &:hover {
         background-color: transparent;
       }
@@ -179,12 +201,22 @@ $types: primary, secondary, tertiary, info, warning, danger;
   @include m('large') {
     height: var(--#{$namespace}-height-control-large);
     padding: 10px var(--#{$namespace}-spacing-base);
+
+    &#{m('is-icon')} {
+      width: var(--#{$namespace}-height-control-large);
+      padding: 0;
+    }
   }
 
   // 小尺寸
   @include m('small') {
     height: var(--#{$namespace}-height-control-small);
     padding: var(--#{$namespace}-spacing-super-tight) var(--#{$namespace}-spacing-base-tight);
+
+    &#{m('is-icon')} {
+      width: var(--#{$namespace}-height-control-small);
+      padding: 0;
+    }
   }
 
   // 块状
