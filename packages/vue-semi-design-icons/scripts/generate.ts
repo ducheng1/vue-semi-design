@@ -13,7 +13,10 @@ async function getSvgMap(): Promise<Record<string, string>> {
   const svgMapEntries = await Promise.all(
     list.map(async (path) => {
       const name = path.split('/').pop()?.replace('.svg', '').replace('_', '-')
-      const svg = await readFile(path, { encoding: 'utf-8' })
+      let svg = await readFile(path, { encoding: 'utf-8' })
+
+      svg = svg.replaceAll(/fill="#?[a-zA-Z0-9]+" /g, `fill="currentColor" `)
+
       return [`Icon${pascalCase(name as string)}`, svg]
     }),
   )

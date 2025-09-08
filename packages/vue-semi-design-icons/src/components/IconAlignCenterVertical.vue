@@ -7,9 +7,15 @@ defineOptions({
 </script>
 
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
     <path
-      fill="#000"
+      fill="currentColor"
       fill-rule="evenodd"
       d="M13.5 5.915V3a1.5 1.5 0 0 0-3 0v2.915l-1.256-.717a1.5 1.5 0 0 0-1.488 2.604l3.5 2a1.5 1.5 0 0 0 1.488 0l3.5-2a1.5 1.5 0 1 0-1.488-2.604zm-9 7.585a1.5 1.5 0 0 1 0-3h15a1.5 1.5 0 0 1 0 3zm9 4.585 1.256.717a1.5 1.5 0 1 0 1.488-2.604l-3.5-2a1.5 1.5 0 0 0-1.488 0l-3.5 2a1.5 1.5 0 0 0 1.488 2.604l1.256-.717V21a1.5 1.5 0 0 0 3 0z"
       clip-rule="evenodd"

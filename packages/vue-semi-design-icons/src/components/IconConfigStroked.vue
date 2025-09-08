@@ -7,8 +7,14 @@ defineOptions({
 </script>
 
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-    <g fill="#000" fill-rule="evenodd" clip-path="url(#a)" clip-rule="evenodd">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <g fill="currentColor" fill-rule="evenodd" clip-path="url(#a)" clip-rule="evenodd">
       <path
         d="M16.954 4.235c0-.621.503-1.125 1.125-1.125h3.316a1.125 1.125 0 0 1 0 2.25h-3.316a1.125 1.125 0 0 1-1.125-1.125M13.658.9c.621 0 1.125.504 1.125 1.125v4.421a1.125 1.125 0 0 1-2.25 0V2.025c0-.621.504-1.125 1.125-1.125"
       />
@@ -23,7 +29,7 @@ defineOptions({
       />
     </g>
     <defs>
-      <clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z" /></clipPath>
+      <clipPath id="a"><path fill="currentColor" d="M0 0h24v24H0z" /></clipPath>
     </defs>
   </svg>
 </template>

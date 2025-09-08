@@ -7,13 +7,19 @@ defineOptions({
 </script>
 
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
     <path
-      fill="#000"
+      fill="currentColor"
       d="M11.079.816a1.5 1.5 0 0 1 1.842 0l4.5 3.5a1.5 1.5 0 0 1-1.842 2.368L13.5 5.067V7.5a1.5 1.5 0 0 1-3 0V5.067L8.42 6.684A1.5 1.5 0 0 1 6.58 4.316z"
     />
     <path
-      fill="#000"
+      fill="currentColor"
       d="M2 11a3 3 0 0 1 3-3h5.5v6.5a1.5 1.5 0 0 0 3 0V8H19a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3z"
     />
   </svg>
