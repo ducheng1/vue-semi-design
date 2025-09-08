@@ -53,7 +53,7 @@ import 'vue-semi-design/styles/index.css'
 
 const app = createApp(App)
 
-app.use(SemiDesign)
+app.use(VueSemiDesign)
 
 app.mount('#app')
 ```

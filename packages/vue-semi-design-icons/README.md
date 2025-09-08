@@ -1,23 +1,49 @@
-# Rslib project
+# Vue Semi Design Icons
 
-## Setup
+Icon lib for Vue Semi Design.
 
-Install the dependencies:
+## Quick Start
 
-```bash
-pnpm install
+```shell
+# with npm
+npm i @vue-semi-design/icons
+
+# with yarn
+yarn add @vue-semi-design/icons
+
+# with pnpm (recommended)
+pnpm add @vue-semi-design/icons
 ```
 
-## Get started
+Import icons in project:
 
-Build the library:
+```vue
+<script>
+import { IconLoading } from '@vue-semi-design/icons'
+import { SemiIcon } from 'vue-semi-design'
+</script>
 
-```bash
-pnpm build
+<template>
+  <SemiIcon>
+    <IconLoading />
+  </SemiIcon>
+</template>
 ```
 
-Build the library in watch mode:
+Or you can full import in entry file
 
-```bash
-pnpm dev
+```typescript
+import VueSemiDesignIcons from '@vue-semi-design/icons'
+import { createApp } from 'vue'
+import App from './App.vue'
+
+const app = createApp(App)
+
+app.use(VueSemiDesignIcons)
+
+app.mount('#app')
 ```
+
+## License
+
+Vue Semi Design Icons is releasing under [MIT License](https://github.com/ducheng1/vue-semi-design/blob/dev/LICENSE)
