@@ -24,7 +24,8 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "@vue-semi-design/icons": "npm:@vue-semi-design/icons@latest",
     "vitepress": "^1.6.4",
-    "vue-semi-design": "workspace:*"
+    "vue-semi-design": "npm:vue-semi-design@latest"
   }
 }

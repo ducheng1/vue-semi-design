@@ -5,6 +5,7 @@ layout: home
 hero:
   name: "Vue Semi Design"
   text: "A vue component library based on semi design"
+  logo: "/semi_logo.svg"
   tagline: My great project tagline
   actions:
     - theme: brand

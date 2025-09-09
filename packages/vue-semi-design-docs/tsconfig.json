@@ -18,6 +18,6 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": [".vitepress", "src"],
+  "include": [".vitepress/**/*", "src"],
   "exclude": ["node_modules", "dist", ".turbo"]
 }
