@@ -50,7 +50,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@vue-semi-design/icons": "workspace:*"
+    "@vue-semi-design/icons": "npm:@vue-semi-design/icons@latest"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.5.3",

@@ -33,12 +33,12 @@ Then import component and css
 
 ```vue
 <script>
-import { SemiButton } from 'vue-semi-design'
+import { Button } from 'vue-semi-design'
 </script>
 
 <template>
   <div>
-    <SemiButton>Button</SemiButton>
+    <Button>Button</Button>
   </div>
 </template>
 ```
