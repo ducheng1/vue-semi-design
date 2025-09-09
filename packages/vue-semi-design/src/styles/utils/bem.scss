@@ -63,3 +63,9 @@ $element-class: null;
 
   @return $current-selector;
 }
+
+@function b($block) {
+  $block-class: c.$namespace + c.$block-prefix + $block;
+
+  @return $block-class;
+}

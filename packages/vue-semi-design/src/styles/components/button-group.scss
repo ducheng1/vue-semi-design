@@ -1,0 +1,56 @@
+@use '../utils/bem' as *;
+@use '../utils/constants' as *;
+@use '../utils/mixin' as *;
+
+@include b(button-group) {
+  .#{b(button)} + .#{b(button)} {
+    position: relative;
+    margin-left: 0;
+    border-left: none;
+  }
+
+  .#{b(button)} {
+    border-radius: 0;
+
+    &::after {
+      content: ' ';
+
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      width: 1px;
+      height: 20px;
+
+      background-color: var(--#{$namespace}-color-fill-0);
+    }
+
+    &:first-child {
+      border-top-left-radius: var(--#{$namespace}-border-radius-small);
+      border-bottom-left-radius: var(--#{$namespace}-border-radius-small);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--#{$namespace}-border-radius-small);
+      border-bottom-right-radius: var(--#{$namespace}-border-radius-small);
+    }
+  }
+
+  @include m(large) {
+    .#{b(button)} {
+      height: var(--#{$namespace}-height-control-large);
+    }
+  }
+
+  @include m(small) {
+    .#{b(button)} {
+      height: var(--#{$namespace}-height-control-small);
+    }
+  }
+}

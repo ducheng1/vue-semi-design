@@ -4,6 +4,10 @@ import { computed } from 'vue'
 import { bem } from '../../utils'
 import '../../styles/components/icon.scss'
 
+defineOptions({
+  name: 'SemiIcon',
+})
+
 const { size, rotate, spin } = defineProps<IconProps>()
 
 const b = bem('icon')

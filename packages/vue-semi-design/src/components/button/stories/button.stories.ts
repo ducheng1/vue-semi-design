@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { IconDelete } from '@vue-semi-design/icons'
-import Button from '..'
+import Button, { ButtonGroup } from '..'
 import Icon from '../../icon'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
-  title: '基础/按钮',
+  title: '基础/Button 按钮',
   component: Button,
   tags: ['autodocs'],
   parameters: {
@@ -216,6 +216,43 @@ export const WithIcon: Story = {
           </Icon>
         </template>
       </Button>
+    `,
+  }),
+}
+
+export const NoHorizontalPadding: Story = {
+  name: '无横向内边距',
+  args: {
+    noHorizontalPadding: true,
+  },
+}
+
+export const Group: Story = {
+  name: '按钮组',
+  render: () => ({
+    components: { ButtonGroup, Button },
+    template: `
+    <ButtonGroup size="large" style="margin-bottom: 8px">
+      <Button>按钮1</Button>
+      <Button>按钮2</Button>
+      <Button>按钮3</Button>
+    </ButtonGroup>
+    <ButtonGroup theme="solid" style="margin-bottom: 8px">
+      <Button>按钮1</Button>
+      <Button>按钮2</Button>
+      <Button>按钮3</Button>
+    </ButtonGroup>
+    <ButtonGroup theme="borderless" type="warning" style="margin-bottom: 8px">
+      <Button>按钮1</Button>
+      <Button>按钮2</Button>
+      <Button>按钮3</Button>
+    </ButtonGroup>
+    <ButtonGroup size="small" type="danger" theme="outline">
+      <Button>按钮1</Button>
+      <Button>按钮2</Button>
+      <Button>按钮3</Button>
+      <Button>按钮4</Button>
+    </ButtonGroup>
     `,
   }),
 }

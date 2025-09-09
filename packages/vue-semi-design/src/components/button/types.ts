@@ -20,3 +20,14 @@ export interface ButtonProps {
   /** 按钮类型 */
   type?: ComponentTypeType
 }
+
+export interface ButtonGroupProps {
+  /** 按钮大小 */
+  size?: ComponentSizeType
+  /** 按钮主题 */
+  theme?: ComponentThemeType
+  /** 按钮类型 */
+  type?: ComponentTypeType
+  /** 禁用状态 */
+  disabled?: boolean
+}

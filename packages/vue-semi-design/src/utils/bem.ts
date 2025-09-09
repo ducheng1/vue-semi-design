@@ -1,4 +1,5 @@
 import type { Nullable } from './types'
+import { kebabCase } from 'es-toolkit'
 import { blockPrefix, elementPrefix, modifierPrefix, namespace } from '../constants'
 
 /**
@@ -6,7 +7,7 @@ import { blockPrefix, elementPrefix, modifierPrefix, namespace } from '../consta
  * @param componentName
  * @returns a function that generates bem className
  */
-export function bem(componentName: string) {
+export function bem(componentName: string, onlyBemClass = false) {
   /**
    * generate bem className
    * @param elementOrModifiers
@@ -44,16 +45,18 @@ export function bem(componentName: string) {
     const modifiedClassNames = Object.entries(modifiers).reduce((res, [modifier, value]) => {
       if (typeof value === 'boolean') {
         if (value) {
-          res.push(className + modifierPrefix + modifier)
+          res.push(className + modifierPrefix + kebabCase(modifier))
         }
       } else {
         if (value) {
-          res.push(className + modifierPrefix + value)
+          res.push(className + modifierPrefix + kebabCase(value))
         }
       }
       return res
     }, [] as string[])
 
-    return `${className} ${modifiedClassNames.join(' ')}`
+    return onlyBemClass
+      ? modifiedClassNames.join(' ')
+      : `${className} ${modifiedClassNames.join(' ')}`
   }
 }

@@ -5,7 +5,7 @@ import Icon from '..'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Icon> = {
-  title: '基础/图标',
+  title: '基础/Icon 图标',
   component: Icon,
   tags: ['autodocs'],
   parameters: {

@@ -2,7 +2,7 @@
 import type { ButtonProps } from './types'
 import { IconSpin } from '@vue-semi-design/icons'
 import { computed, useSlots } from 'vue'
-import { bem } from '../../utils'
+import { bem, getValidSize, getValidTheme, getValidType } from '../../utils'
 import SemiIcon from '../icon'
 import '../../styles/components/button.scss'
 
@@ -10,48 +10,48 @@ defineOptions({
   name: 'SemiButton',
 })
 
-const {
-  type,
-  theme,
-  size,
-  disabled,
-  block,
-  htmlType = 'button',
-  loading,
-  iconPosition,
-} = defineProps<ButtonProps>()
+const props = withDefaults(defineProps<ButtonProps>(), {
+  htmlType: 'button',
+  type: 'primary',
+  theme: 'light',
+  size: 'default',
+  iconPosition: 'left',
+})
 
-const b = bem('button')
+const buttonBlock = bem('button')
 const slots = useSlots()
 
+const validSize = computed(() => getValidSize(props.size))
+
 const className = computed<string>(() =>
-  b({
-    'type': type || 'primary',
-    'theme': theme || 'light',
-    disabled,
-    loading,
-    'size': size === 'default' ? false : size,
-    block,
-    'right-icon': iconPosition === 'right',
+  buttonBlock({
+    'type': getValidType(props.type),
+    'theme': getValidTheme(props.theme),
+    'disabled': props.disabled,
+    'loading': props.loading,
+    'size': validSize.value === 'default' ? false : validSize.value,
+    'block': props.block,
+    'right-icon': props.iconPosition === 'right',
     'is-icon': slots.icon && !slots.default,
+    'is-px-0': props.noHorizontalPadding,
   }),
 )
 </script>
 
 <template>
   <button
-    :type="htmlType"
+    :type="props.htmlType"
     :class="className"
-    :disabled="disabled || loading"
-    :aria-disabled="disabled || loading"
+    :disabled="props.disabled || props.loading"
+    :aria-disabled="props.disabled || props.loading"
   >
-    <span v-if="slots.icon || loading" :class="b('icon')">
-      <SemiIcon v-if="loading" spin :size>
+    <span v-if="slots.icon || props.loading" :class="buttonBlock('icon')">
+      <SemiIcon v-if="props.loading" spin :size="props.size">
         <IconSpin />
       </SemiIcon>
       <slot v-else name="icon" />
     </span>
-    <span v-if="slots.default" :class="b('content')">
+    <span v-if="slots.default" :class="buttonBlock('content')">
       <slot />
     </span>
   </button>

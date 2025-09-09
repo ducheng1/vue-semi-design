@@ -1,13 +1,15 @@
 import type { App } from 'vue'
 import type { ComponentWithInstall } from '../../utils'
-import type { ButtonProps } from './types'
-import SemiButton from './button.vue'
+import type { ButtonGroupProps, ButtonProps } from './types'
+import ButtonGroup from './button-group.vue'
+import Button from './button.vue'
 
-SemiButton.install = (app: App) => {
-  app.component(SemiButton.name as string, SemiButton)
+Button.install = (app: App) => {
+  app.component(Button.name as string, Button)
   return app
 }
 
-export default SemiButton as ComponentWithInstall<typeof SemiButton>
+export default Button as ComponentWithInstall<typeof Button>
+export { ButtonGroup }
 
-export type { ButtonProps }
+export type { ButtonGroupProps, ButtonProps }

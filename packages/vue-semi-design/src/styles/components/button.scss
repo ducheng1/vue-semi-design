@@ -22,6 +22,11 @@ $types: primary, secondary, tertiary, info, warning, danger;
     padding: 0;
   }
 
+  @include m('is-px-0') {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   & + & {
     margin-left: var(--#{$namespace}-spacing-tight);
   }
