@@ -17,6 +17,8 @@ $types: primary, secondary, tertiary, info, warning, danger;
   padding: 6px var(--#{$namespace}-spacing-base-tight);
   border-radius: var(--#{$namespace}-border-radius-small);
 
+  white-space: nowrap;
+
   @include m('is-icon') {
     width: var(--#{$namespace}-height-control-default);
     padding: 0;
@@ -25,10 +27,6 @@ $types: primary, secondary, tertiary, info, warning, danger;
   @include m('is-px-0') {
     padding-right: 0;
     padding-left: 0;
-  }
-
-  & + & {
-    margin-left: var(--#{$namespace}-spacing-tight);
   }
 
   @include e(content) {

@@ -1,0 +1,31 @@
+@use '../utils/bem' as *;
+@use '../utils/constants' as *;
+@use '../utils/mixin' as *;
+
+@include b(space) {
+  @include base-style;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  @include m(start) {
+    align-items: flex-start;
+  }
+
+  @include m(end) {
+    align-items: flex-end;
+  }
+
+  @include m(baseline) {
+    align-items: baseline;
+  }
+
+  @include m(vertical) {
+    flex-direction: column;
+  }
+
+  @include m(wrap) {
+    flex-wrap: wrap;
+  }
+}

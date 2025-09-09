@@ -9,3 +9,9 @@ export type ComponentTypeType = (typeof typeList)[number]
 
 export const iconSizeList = ['extra-small', 'small', 'default', 'large', 'extra-large'] as const
 export type IconSizeType = (typeof iconSizeList)[number]
+
+export const alignList = ['start', 'center', 'end', 'baseline'] as const
+export type ComponentAlignType = (typeof alignList)[number]
+
+export const spacingList = ['tight', 'medium', 'loose'] as const
+export type ComponentSpacingType = (typeof spacingList)[number]
