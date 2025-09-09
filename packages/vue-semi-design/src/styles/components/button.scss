@@ -124,20 +124,20 @@ $types: primary, secondary, tertiary, info, warning, danger;
     cursor: not-allowed;
 
     &#{m('solid')} {
-      color: var(--#{$namespace}-color-text-disabled);
-      background-color: var(--#{$namespace}-color-bg-disabled);
+      color: var(--#{$namespace}-color-disabled-text);
+      background-color: var(--#{$namespace}-color-disabled-bg);
 
       &:hover {
-        background-color: var(--#{$namespace}-color-bg-disabled);
+        background-color: var(--#{$namespace}-color-disabled-bg);
       }
 
       &:active {
-        background-color: var(--#{$namespace}-color-bg-disabled);
+        background-color: var(--#{$namespace}-color-disabled-bg);
       }
     }
 
     &#{m('light')} {
-      color: var(--#{$namespace}-color-text-disabled);
+      color: var(--#{$namespace}-color-disabled-text);
       background-color: var(--#{$namespace}-color-fill-0);
 
       &:hover {
@@ -150,7 +150,7 @@ $types: primary, secondary, tertiary, info, warning, danger;
     }
 
     &#{m('borderless')} {
-      color: var(--#{$namespace}-color-text-disabled);
+      color: var(--#{$namespace}-color-disabled-text);
 
       &:hover {
         background-color: transparent;

@@ -91,7 +91,7 @@
   --#{$namespace}-color-primary-disabled: #{light-theme.$primary-disabled};
 
   // 浅版主色
-  --#{$namespace}-color-primary-light: #{light-theme.$primary-light};
+  --#{$namespace}-color-primary-light-default: #{light-theme.$primary-light};
   --#{$namespace}-color-primary-light-hover: #{light-theme.$primary-light-hover};
   --#{$namespace}-color-primary-light-active: #{light-theme.$primary-light-active};
 
@@ -102,7 +102,7 @@
   --#{$namespace}-color-secondary-disabled: #{light-theme.$secondary-disabled};
 
   // 浅版次要色
-  --#{$namespace}-color-secondary-light: #{light-theme.$secondary-light};
+  --#{$namespace}-color-secondary-light-default: #{light-theme.$secondary-light};
   --#{$namespace}-color-secondary-light-hover: #{light-theme.$secondary-light-hover};
   --#{$namespace}-color-secondary-light-active: #{light-theme.$secondary-light-active};
 
@@ -112,7 +112,7 @@
   --#{$namespace}-color-tertiary-active: #{light-theme.$tertiary-active};
 
   // 浅版第三色
-  --#{$namespace}-color-tertiary-light: #{light-theme.$tertiary-light};
+  --#{$namespace}-color-tertiary-light-default: #{light-theme.$tertiary-light};
   --#{$namespace}-color-tertiary-light-hover: #{light-theme.$tertiary-light-hover};
   --#{$namespace}-color-tertiary-light-active: #{light-theme.$tertiary-light-active};
 
@@ -123,7 +123,7 @@
   --#{$namespace}-color-info-disabled: #{light-theme.$info-disabled};
 
   // 浅版信息色
-  --#{$namespace}-color-info-light: #{light-theme.$info-light};
+  --#{$namespace}-color-info-light-default: #{light-theme.$info-light};
   --#{$namespace}-color-info-light-hover: #{light-theme.$info-light-hover};
   --#{$namespace}-color-info-light-active: #{light-theme.$info-light-active};
 
@@ -134,7 +134,7 @@
   --#{$namespace}-color-success-disabled: #{light-theme.$success-disabled};
 
   // 浅版成功色
-  --#{$namespace}-color-success-light: #{light-theme.$success-light};
+  --#{$namespace}-color-success-light-default: #{light-theme.$success-light};
   --#{$namespace}-color-success-light-hover: #{light-theme.$success-light-hover};
   --#{$namespace}-color-success-light-active: #{light-theme.$success-light-active};
 
@@ -145,7 +145,7 @@
   --#{$namespace}-color-danger-disabled: #{light-theme.$danger-disabled};
 
   // 浅版危险色
-  --#{$namespace}-color-danger-light: #{light-theme.$danger-light};
+  --#{$namespace}-color-danger-light-default: #{light-theme.$danger-light};
   --#{$namespace}-color-danger-light-hover: #{light-theme.$danger-light-hover};
   --#{$namespace}-color-danger-light-active: #{light-theme.$danger-light-active};
 
@@ -156,7 +156,7 @@
   --#{$namespace}-color-warning-disabled: #{light-theme.$warning-disabled};
 
   // 浅版警告色
-  --#{$namespace}-color-warning-light: #{light-theme.$warning-light};
+  --#{$namespace}-color-warning-light-default: #{light-theme.$warning-light};
   --#{$namespace}-color-warning-light-hover: #{light-theme.$warning-light-hover};
   --#{$namespace}-color-warning-light-active: #{light-theme.$warning-light-active};
 
@@ -178,6 +178,8 @@
   --#{$namespace}-color-bg-2: #{light-theme.$bg-2};
   --#{$namespace}-color-bg-3: #{light-theme.$bg-3};
   --#{$namespace}-color-bg-4: #{light-theme.$bg-4};
+  --#{$namespace}-color-nav-bg: #{light-theme.$bg-nav};
+  --#{$namespace}-color-overlay-bg: #{light-theme.$bg-overlay};
 
   // 填充色
   --#{$namespace}-color-fill-0: #{light-theme.$fill-0};
@@ -188,10 +190,10 @@
   --#{$namespace}-color-border: #{light-theme.$border};
 
   // 禁用态
-  --#{$namespace}-color-text-disabled: #{light-theme.$text-disabled};
-  --#{$namespace}-color-border-disabled: #{light-theme.$border-disabled};
-  --#{$namespace}-color-bg-disabled: #{light-theme.$bg-disabled};
-  --#{$namespace}-color-fill-disabled: #{light-theme.$fill-disabled};
+  --#{$namespace}-color-disabled-text: #{light-theme.$text-disabled};
+  --#{$namespace}-color-disabled-border: #{light-theme.$border-disabled};
+  --#{$namespace}-color-disabled-bg: #{light-theme.$bg-disabled};
+  --#{$namespace}-color-disabled-fill: #{light-theme.$fill-disabled};
 
   // 拟阴影色
   --#{$namespace}-color-shadow: #{light-theme.$shadow};
@@ -218,7 +220,7 @@
   --#{$namespace}-color-primary-disabled: #{dark-theme.$primary-disabled};
 
   // 浅版主色
-  --#{$namespace}-color-primary-light: #{dark-theme.$primary-light};
+  --#{$namespace}-color-primary-light-default: #{dark-theme.$primary-light};
   --#{$namespace}-color-primary-light-hover: #{dark-theme.$primary-light-hover};
   --#{$namespace}-color-primary-light-active: #{dark-theme.$primary-light-active};
 
@@ -229,7 +231,7 @@
   --#{$namespace}-color-secondary-disabled: #{dark-theme.$secondary-disabled};
 
   // 浅版次要色
-  --#{$namespace}-color-secondary-light: #{dark-theme.$secondary-light};
+  --#{$namespace}-color-secondary-light-default: #{dark-theme.$secondary-light};
   --#{$namespace}-color-secondary-light-hover: #{dark-theme.$secondary-light-hover};
   --#{$namespace}-color-secondary-light-active: #{dark-theme.$secondary-light-active};
 
@@ -239,7 +241,7 @@
   --#{$namespace}-color-tertiary-active: #{dark-theme.$tertiary-active};
 
   // 浅版第三色
-  --#{$namespace}-color-tertiary-light: #{dark-theme.$tertiary-light};
+  --#{$namespace}-color-tertiary-light-default: #{dark-theme.$tertiary-light};
   --#{$namespace}-color-tertiary-light-hover: #{dark-theme.$tertiary-light-hover};
   --#{$namespace}-color-tertiary-light-active: #{dark-theme.$tertiary-light-active};
 
@@ -250,7 +252,7 @@
   --#{$namespace}-color-info-disabled: #{dark-theme.$info-disabled};
 
   // 浅版信息色
-  --#{$namespace}-color-info-light: #{dark-theme.$info-light};
+  --#{$namespace}-color-info-light-default: #{dark-theme.$info-light};
   --#{$namespace}-color-info-light-hover: #{dark-theme.$info-light-hover};
   --#{$namespace}-color-info-light-active: #{dark-theme.$info-light-active};
 
@@ -261,7 +263,7 @@
   --#{$namespace}-color-success-disabled: #{dark-theme.$success-disabled};
 
   // 浅版成功色
-  --#{$namespace}-color-success-light: #{dark-theme.$success-light};
+  --#{$namespace}-color-success-light-default: #{dark-theme.$success-light};
   --#{$namespace}-color-success-light-hover: #{dark-theme.$success-light-hover};
   --#{$namespace}-color-success-light-active: #{dark-theme.$success-light-active};
 
@@ -272,7 +274,7 @@
   --#{$namespace}-color-danger-disabled: #{dark-theme.$danger-disabled};
 
   // 浅版危险色
-  --#{$namespace}-color-danger-light: #{dark-theme.$danger-light};
+  --#{$namespace}-color-danger-light-default: #{dark-theme.$danger-light};
   --#{$namespace}-color-danger-light-hover: #{dark-theme.$danger-light-hover};
   --#{$namespace}-color-danger-light-active: #{dark-theme.$danger-light-active};
 
@@ -283,7 +285,7 @@
   --#{$namespace}-color-warning-disabled: #{dark-theme.$warning-disabled};
 
   // 浅版警告色
-  --#{$namespace}-color-warning-light: #{dark-theme.$warning-light};
+  --#{$namespace}-color-warning-light-default: #{dark-theme.$warning-light};
   --#{$namespace}-color-warning-light-hover: #{dark-theme.$warning-light-hover};
   --#{$namespace}-color-warning-light-active: #{dark-theme.$warning-light-active};
 
@@ -305,6 +307,8 @@
   --#{$namespace}-color-bg-2: #{dark-theme.$bg-2};
   --#{$namespace}-color-bg-3: #{dark-theme.$bg-3};
   --#{$namespace}-color-bg-4: #{dark-theme.$bg-4};
+  --#{$namespace}-color-nav-bg: #{dark-theme.$bg-nav};
+  --#{$namespace}-color-overlay-bg: #{dark-theme.$bg-overlay};
 
   // 填充色
   --#{$namespace}-color-fill-0: #{dark-theme.$fill-0};
@@ -315,10 +319,10 @@
   --#{$namespace}-color-border: #{dark-theme.$border};
 
   // 禁用态
-  --#{$namespace}-color-text-disabled: #{dark-theme.$text-disabled};
-  --#{$namespace}-color-border-disabled: #{dark-theme.$border-disabled};
-  --#{$namespace}-color-bg-disabled: #{dark-theme.$bg-disabled};
-  --#{$namespace}-color-fill-disabled: #{dark-theme.$fill-disabled};
+  --#{$namespace}-color-disabled-text: #{dark-theme.$text-disabled};
+  --#{$namespace}-color-disabled-border: #{dark-theme.$border-disabled};
+  --#{$namespace}-color-disabled-bg: #{dark-theme.$bg-disabled};
+  --#{$namespace}-color-disabled-fill: #{dark-theme.$fill-disabled};
 
   // 拟阴影色
   --#{$namespace}-color-shadow: #{dark-theme.$shadow};

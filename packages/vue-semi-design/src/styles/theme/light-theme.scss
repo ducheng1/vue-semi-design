@@ -96,6 +96,8 @@ $bg-1: #{$white};
 $bg-2: #{$white};
 $bg-3: #{$white};
 $bg-4: #{$white};
+$bg-nav: #{$white};
+$bg-overlay: rgb(22 22 26 / 60%);
 
 // 填充色
 $fill-0: #{color.change(map.get($grey, 8), $alpha: 0.05)};
