@@ -1,3 +1,0 @@
-files:
-  - source: /docs/src/**/*.md
-    translation: /docs/src/%locale%/**/%original_file_name%
