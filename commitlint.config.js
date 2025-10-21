@@ -11,7 +11,7 @@ export default defineConfig({
   extends: ['@commitlint/config-conventional'],
   prompt: {
     useEmoji: true,
-    scopes,
+    scopes: [...scopes, 'docs'],
     types: [
       {
         value: 'feat',

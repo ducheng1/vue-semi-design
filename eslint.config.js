@@ -10,11 +10,7 @@ export default antfu(
     vue: true,
     jsx: true,
     markdown: true,
-    formatters: {
-      html: true,
-      css: false,
-      markdown: true,
-    },
+    pnpm: true,
     ignores: [
       '**/node_modules/**',
       '**/dist/**',
@@ -22,6 +18,7 @@ export default antfu(
       '.github/**',
       '**/.turbo/**',
       'packages/vue-semi-design-docs/.vitepress/theme/useComponents.js',
+      '**/*.md',
     ],
   },
   {
