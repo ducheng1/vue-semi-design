@@ -26,7 +26,7 @@
   "dependencies": {
     "@vue-semi-design/icons": "catalog:",
     "vitepress": "catalog:",
-    "vue-semi-design": "workspace:*"
+    "vue-semi-design": "catalog:"
   },
   "devDependencies": {
     "@nolebase/vitepress-plugin-sidebar": "catalog:",
