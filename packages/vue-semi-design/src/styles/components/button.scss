@@ -36,6 +36,10 @@ $types: primary, secondary, tertiary, info, warning, danger;
     font-size: var(--#{$namespace}-font-size-regular);
   }
 
+  @include e(icon) {
+    display: inline-flex;
+  }
+
   @include m(right-icon) {
     flex-direction: row-reverse;
   }
