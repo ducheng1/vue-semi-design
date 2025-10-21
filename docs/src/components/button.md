@@ -29,3 +29,9 @@ button/block
 :::demo
 button/icon
 :::
+
+## 按钮组
+
+:::demo
+button/group
+:::

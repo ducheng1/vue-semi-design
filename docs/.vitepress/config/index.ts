@@ -19,4 +19,9 @@ export default defineConfig({
       md.use(mdContainer, 'demo', createDemoContainer(md))
     },
   },
+  vite: {
+    ssr: {
+      noExternal: ['vue-semi-design'],
+    },
+  },
 })
