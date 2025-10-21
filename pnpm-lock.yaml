@@ -167,6 +167,9 @@ importers:
       '@vue-semi-design/icons':
         specifier: npm:@vue-semi-design/icons@latest
         version: 1.0.2(vue@3.5.21(typescript@5.9.2))
+      es-toolkit:
+        specifier: ^1.39.10
+        version: 1.39.10
     devDependencies:
       '@rsbuild/core':
         specifier: ^1.5.3
@@ -177,6 +180,12 @@ importers:
       '@rslib/core':
         specifier: ^0.12.4
         version: 0.12.4(typescript@5.9.2)
+      '@vueuse/components':
+        specifier: ^13.9.0
+        version: 13.9.0(vue@3.5.21(typescript@5.9.2))
+      '@vueuse/core':
+        specifier: ^13.9.0
+        version: 13.9.0(vue@3.5.21(typescript@5.9.2))
       rsbuild-plugin-unplugin-vue:
         specifier: ^0.1.0
         version: 0.1.0(@rsbuild/core@1.5.3)(@types/node@24.3.1)(jiti@2.5.1)(sass-embedded@1.92.0)(sass@1.92.0)(terser@5.44.0)(tsx@4.20.5)(vue@3.5.21(typescript@5.9.2))(yaml@2.8.1)
@@ -203,7 +212,7 @@ importers:
         version: 1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(@types/react@19.1.12)(change-case@5.4.4)(postcss@8.5.6)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass-embedded@1.92.0)(sass@1.92.0)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.2)
       vue-semi-design:
         specifier: npm:vue-semi-design@latest
-        version: 0.0.1-alpha.4(vue@3.5.21(typescript@5.9.2))
+        version: 0.0.1-alpha.5(vue@3.5.21(typescript@5.9.2))
 
   packages/vue-semi-design-icons:
     dependencies:
@@ -2427,8 +2436,18 @@ packages:
   '@vue/test-utils@2.4.6':
     resolution: {integrity: sha512-FMxEjOpYNYiFe0GkaHsnJPXFHxQ6m4t8vI/ElPGpMWxZKpmRvQ33OIrvRXemy6yha03RxhOlQuy+gZMC3CQSow==}
 
+  '@vueuse/components@13.9.0':
+    resolution: {integrity: sha512-0DDFpjG3hEEK+3YgSzE/OzOGqpo/KmxcXWzW2YdmgahZvaoUdegn68GmbdcHRJE7CH55dDj13Cz47iN8QoI3jQ==}
+    peerDependencies:
+      vue: ^3.5.0
+
   '@vueuse/core@12.8.2':
     resolution: {integrity: sha512-HbvCmZdzAu3VGi/pWYm5Ut+Kd9mn1ZHnn4L5G8kOQTPs/IwIAmJoBrmYk2ckLArgMXZj0AW3n5CAejLUO+PhdQ==}
+
+  '@vueuse/core@13.9.0':
+    resolution: {integrity: sha512-ts3regBQyURfCE2BcytLqzm8+MmLlo5Ln/KLoxDVcsZ2gzIwVNnQpQOL/UKV8alUqjSZOlpFZcRNsLRqj+OzyA==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@vueuse/integrations@12.8.2':
     resolution: {integrity: sha512-fbGYivgK5uBTRt7p5F3zy6VrETlV9RtZjBqd1/HxGdjdckBgBM4ugP8LHpjolqTj14TXTxSK1ZfgPbHYyGuH7g==}
@@ -2474,8 +2493,16 @@ packages:
   '@vueuse/metadata@12.8.2':
     resolution: {integrity: sha512-rAyLGEuoBJ/Il5AmFHiziCPdQzRt88VxR+Y/A/QhJ1EWtWqPBBAxTAFaSkviwEuOEZNtW8pvkPgoCZQ+HxqW1A==}
 
+  '@vueuse/metadata@13.9.0':
+    resolution: {integrity: sha512-1AFRvuiGphfF7yWixZa0KwjYH8ulyjDCC0aFgrGRz8+P4kvDFSdXLVfTk5xAN9wEuD1J6z4/myMoYbnHoX07zg==}
+
   '@vueuse/shared@12.8.2':
     resolution: {integrity: sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w==}
+
+  '@vueuse/shared@13.9.0':
+    resolution: {integrity: sha512-e89uuTLMh0U5cZ9iDpEI2senqPGfbPRTHM/0AaQkcxnpqjkZqDYP8rpfm7edOz8s+pOCOROEy1PIveSW8+fL5g==}
+    peerDependencies:
+      vue: ^3.5.0
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -6834,8 +6861,8 @@ packages:
       vue:
         optional: true
 
-  vue-semi-design@0.0.1-alpha.4:
-    resolution: {integrity: sha512-uCdrgEPTmTQQ6P8WZ06lRaHiB3AY79Y7vZrAzmfznkaShwm6vk+rH1n/5Tqml+UpyMGuO4S6wIBLFx6cYdcAhQ==}
+  vue-semi-design@0.0.1-alpha.5:
+    resolution: {integrity: sha512-oTEeGDoLQ/PAWP1m2wB3zyB71OWbv9a81hkzqMWSuDI0sBljtajWsMsTjKCxrGBm/T8SXUOFVqkRCB9jIepl4g==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -9391,6 +9418,12 @@ snapshots:
       js-beautify: 1.15.4
       vue-component-type-helpers: 2.2.12
 
+  '@vueuse/components@13.9.0(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      '@vueuse/core': 13.9.0(vue@3.5.21(typescript@5.9.2))
+      '@vueuse/shared': 13.9.0(vue@3.5.21(typescript@5.9.2))
+      vue: 3.5.21(typescript@5.9.2)
+
   '@vueuse/core@12.8.2(typescript@5.9.2)':
     dependencies:
       '@types/web-bluetooth': 0.0.21
@@ -9399,6 +9432,13 @@ snapshots:
       vue: 3.5.21(typescript@5.9.2)
     transitivePeerDependencies:
       - typescript
+
+  '@vueuse/core@13.9.0(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      '@types/web-bluetooth': 0.0.21
+      '@vueuse/metadata': 13.9.0
+      '@vueuse/shared': 13.9.0(vue@3.5.21(typescript@5.9.2))
+      vue: 3.5.21(typescript@5.9.2)
 
   '@vueuse/integrations@12.8.2(change-case@5.4.4)(focus-trap@7.6.5)(typescript@5.9.2)':
     dependencies:
@@ -9413,11 +9453,17 @@ snapshots:
 
   '@vueuse/metadata@12.8.2': {}
 
+  '@vueuse/metadata@13.9.0': {}
+
   '@vueuse/shared@12.8.2(typescript@5.9.2)':
     dependencies:
       vue: 3.5.21(typescript@5.9.2)
     transitivePeerDependencies:
       - typescript
+
+  '@vueuse/shared@13.9.0(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      vue: 3.5.21(typescript@5.9.2)
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -14301,8 +14347,9 @@ snapshots:
       '@vue/compiler-sfc': 3.5.21
       vue: 3.5.21(typescript@5.9.2)
 
-  vue-semi-design@0.0.1-alpha.4(vue@3.5.21(typescript@5.9.2)):
+  vue-semi-design@0.0.1-alpha.5(vue@3.5.21(typescript@5.9.2)):
     dependencies:
+      '@vue-semi-design/icons': 1.0.2(vue@3.5.21(typescript@5.9.2))
       vue: 3.5.21(typescript@5.9.2)
 
   vue-tsc@3.0.6(typescript@5.9.2):

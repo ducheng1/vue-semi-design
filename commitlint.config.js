@@ -4,7 +4,7 @@ import process from 'node:process'
 import { defineConfig } from 'cz-git'
 
 const scopes = readdirSync(resolve(process.cwd(), 'packages')).map((item) =>
-  item === 'vue-semi-design' ? item : item.replace('vue-semi-design-', ''),
+  item === 'vue-semi-design' ? 'components' : item.replace('vue-semi-design-', ''),
 )
 
 export default defineConfig({

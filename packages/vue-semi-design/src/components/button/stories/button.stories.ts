@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import { IconDelete } from '@vue-semi-design/icons'
 import Button, { ButtonGroup } from '..'
 import Icon from '../../icon'
+import Space from '../../space'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
@@ -27,8 +28,9 @@ export const Default: Story = {}
 export const Light: Story = {
   name: '浅色背景',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       ${Object.entries({
         primary: '浅色主要',
         secondary: '浅色次要',
@@ -42,6 +44,7 @@ export const Light: Story = {
       `,
         )
         .join('')}
+        </Space>
     `,
   }),
 }
@@ -49,8 +52,9 @@ export const Light: Story = {
 export const Solid: Story = {
   name: '深色背景',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       ${Object.entries({
         primary: '深色主要',
         secondary: '深色次要',
@@ -64,6 +68,7 @@ export const Solid: Story = {
       `,
         )
         .join('')}
+        </Space>
     `,
   }),
 }
@@ -71,8 +76,9 @@ export const Solid: Story = {
 export const Borderless: Story = {
   name: '无背景',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       ${Object.entries({
         primary: '主要',
         secondary: '次要',
@@ -86,6 +92,7 @@ export const Borderless: Story = {
       `,
         )
         .join('')}
+        </Space>
     `,
   }),
 }
@@ -93,8 +100,9 @@ export const Borderless: Story = {
 export const Outline: Story = {
   name: '边框',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       ${Object.entries({
         primary: '主要',
         secondary: '次要',
@@ -108,6 +116,7 @@ export const Outline: Story = {
       `,
         )
         .join('')}
+        </Space>
     `,
   }),
 }
@@ -115,8 +124,9 @@ export const Outline: Story = {
 export const Disabled: Story = {
   name: '禁用状态',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       ${Object.entries({
         '': '禁用',
         'borderless': '无背景',
@@ -129,6 +139,7 @@ export const Disabled: Story = {
       `,
         )
         .join('')}
+        </Space>
     `,
   }),
 }
@@ -136,8 +147,9 @@ export const Disabled: Story = {
 export const Size: Story = {
   name: '尺寸',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       ${Object.entries({
         'large': '大尺寸',
         '': '默认尺寸',
@@ -149,6 +161,7 @@ export const Size: Story = {
       `,
         )
         .join('')}
+        </Space>
     `,
   }),
 }
@@ -156,13 +169,15 @@ export const Size: Story = {
 export const Loading: Story = {
   name: '加载态',
   render: () => ({
-    components: { Button },
+    components: { Button, Space },
     template: `
+    <Space>
       <Button theme="light" loading type="primary">加载态</Button>
       <Button theme="solid" loading type="secondary">加载态</Button>
       <Button theme="outline" loading type="tertiary">加载态</Button>
       <Button theme="borderless" loading type="warning">加载态</Button>
       <Button theme="solid" loading type="danger">加载态</Button>
+    </Space>
     `,
   }),
 }
@@ -170,8 +185,9 @@ export const Loading: Story = {
 export const WithIcon: Story = {
   name: '图标按钮',
   render: () => ({
-    components: { Button, Icon, IconDelete },
+    components: { Button, Icon, IconDelete, Space },
     template: `
+    <Space>
       <Button theme="solid" type="danger">
         <template #icon>
           <Icon>
@@ -216,6 +232,7 @@ export const WithIcon: Story = {
           </Icon>
         </template>
       </Button>
+    </Space>
     `,
   }),
 }
@@ -230,19 +247,20 @@ export const NoHorizontalPadding: Story = {
 export const Group: Story = {
   name: '按钮组',
   render: () => ({
-    components: { ButtonGroup, Button },
+    components: { ButtonGroup, Button, Space },
     template: `
-    <ButtonGroup size="large" style="margin-bottom: 8px">
+    <Space vertical>
+    <ButtonGroup size="large">
       <Button>按钮1</Button>
       <Button>按钮2</Button>
       <Button>按钮3</Button>
     </ButtonGroup>
-    <ButtonGroup theme="solid" style="margin-bottom: 8px">
+    <ButtonGroup theme="solid">
       <Button>按钮1</Button>
       <Button>按钮2</Button>
       <Button>按钮3</Button>
     </ButtonGroup>
-    <ButtonGroup theme="borderless" type="warning" style="margin-bottom: 8px">
+    <ButtonGroup theme="borderless" type="warning">
       <Button>按钮1</Button>
       <Button>按钮2</Button>
       <Button>按钮3</Button>
@@ -253,6 +271,7 @@ export const Group: Story = {
       <Button>按钮3</Button>
       <Button>按钮4</Button>
     </ButtonGroup>
+    </Space>
     `,
   }),
 }

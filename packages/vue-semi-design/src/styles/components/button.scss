@@ -17,6 +17,7 @@ $types: primary, secondary, tertiary, info, warning, danger;
   padding: 6px var(--#{$namespace}-spacing-base-tight);
   border-radius: var(--#{$namespace}-border-radius-small);
 
+  font-weight: var(--#{$namespace}-font-weight-bold);
   white-space: nowrap;
 
   @include m('is-icon') {

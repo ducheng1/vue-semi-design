@@ -1,8 +1,12 @@
 @mixin base-style() {
+  position: relative;
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: none;
+
+  font-smooth: antialiased;
 
   background: none;
   outline: none;
