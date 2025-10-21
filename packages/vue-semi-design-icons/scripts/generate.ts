@@ -29,7 +29,7 @@ function vueTemplate(name: string, svg: string) {
   import { defineOptions } from 'vue'
 
   defineOptions({
-    name: 'Icon${name}'
+    name: '${name}'
   })
 </script>
 

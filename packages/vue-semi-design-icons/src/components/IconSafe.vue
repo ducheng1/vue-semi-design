@@ -2,7 +2,7 @@
 import { defineOptions } from 'vue'
 
 defineOptions({
-  name: 'IconIconSafe',
+  name: 'IconSafe',
 })
 </script>
 

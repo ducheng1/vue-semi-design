@@ -2,7 +2,7 @@
 import { defineOptions } from 'vue'
 
 defineOptions({
-  name: 'IconIconLineHeight',
+  name: 'IconLineHeight',
 })
 </script>
 
