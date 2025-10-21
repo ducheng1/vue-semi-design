@@ -1,6 +1,7 @@
+import mdContainer from 'markdown-it-container'
 import { defineConfig } from 'vitepress'
-import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
 
+import createDemoContainer from '../plugins/demo'
 import { themeConfig } from './theme'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -15,10 +16,7 @@ export default defineConfig({
   themeConfig,
   markdown: {
     config: (md) => {
-      md.use(demoblockPlugin)
+      md.use(mdContainer, 'demo', createDemoContainer(md))
     },
-  },
-  vite: {
-    plugins: [demoblockVitePlugin()],
   },
 })

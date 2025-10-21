@@ -1,15 +1,17 @@
 import type { Theme } from 'vitepress'
 // https://vitepress.dev/guide/custom-theme
 import DefaultTheme from 'vitepress/theme'
-// @ts-expect-error no type
-import { useComponents } from './useComponents'
+import VpDemo from '../../components/vp-demo/index.vue'
+import * as examples from '../../examples'
 import './style.css'
-import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
-    useComponents(ctx.app)
+    ctx.app.component('VpDemo', VpDemo)
+    Object.entries(examples).forEach(([name, component]) => {
+      ctx.app.component(`Block${name}`, component)
+    })
   },
 } satisfies Theme

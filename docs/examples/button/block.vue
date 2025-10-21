@@ -3,7 +3,7 @@ import { Button } from 'vue-semi-design'
 </script>
 
 <template>
-  <div class="demo-block">
+  <div class="example-block">
     <Button block>块级按钮</Button>
   </div>
 </template>

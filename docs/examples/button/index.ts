@@ -1,0 +1,5 @@
+export { default as ButtonBlock } from './block.vue'
+export { default as ButtonIcon } from './icon.vue'
+export { default as ButtonSize } from './size.vue'
+export { default as ButtonTheme } from './theme.vue'
+export { default as ButtonType } from './type.vue'

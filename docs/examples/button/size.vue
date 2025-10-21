@@ -3,7 +3,7 @@ import { Button } from 'vue-semi-design'
 </script>
 
 <template>
-  <div class="demo-block">
+  <div class="example-block">
     <Button size="large">大尺寸</Button>
     <Button size="default">默认尺寸</Button>
     <Button size="small">小尺寸</Button>

@@ -140,16 +140,22 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-.demo-block {
+.example-block {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
-.demo-block + .demo-block {
+.example-block + .example-block {
   margin-top: 12px;
 }
 
 .VPHomeHero .VPImage {
   width: 100%;
+}
+
+.vp-doc div[class*='language-'],
+.vp-block {
+  margin: 0;
+  border-radius: 0;
 }
