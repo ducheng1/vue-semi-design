@@ -18,14 +18,19 @@
     "url": "https://github.com/ducheng1/vue-semi-design/issues"
   },
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "pnpm run clean && vitepress build",
+    "dev": "pnpm run generate && vitepress dev",
+    "build": "pnpm run clean && pnpm run generate && vitepress build",
     "preview": "vitepress preview",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist && rimraf ./.vitepress/theme/useComponents.js",
+    "generate": "vitepress-rc --docsDir . --componentsDir ../blocks"
   },
   "dependencies": {
     "@vue-semi-design/icons": "npm:@vue-semi-design/icons@latest",
     "vitepress": "^1.6.4",
-    "vue-semi-design": "npm:vue-semi-design@latest"
+    "vitepress-theme-demoblock": "^3.1.3",
+    "vue-semi-design": "workspace:*"
+  },
+  "devDependencies": {
+    "@nolebase/vitepress-plugin-sidebar": "^2.18.2"
   }
 }

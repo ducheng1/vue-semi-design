@@ -5,15 +5,16 @@ layout: home
 hero:
   name: "Vue Semi Design"
   text: "A vue component library based on semi design"
-  logo: "/semi_logo.svg"
-  tagline: My great project tagline
+  image:
+    src: /semi_logo.svg
+    alt: logo
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 指南
+      link: /guide/quick-start/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 组件
+      link: /components/introduction/
 
 features:
   - title: Feature A

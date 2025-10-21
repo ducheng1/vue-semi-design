@@ -15,7 +15,14 @@ export default antfu(
       css: false,
       markdown: true,
     },
-    ignores: ['node_modules', 'dist', 'pnpm-lock.yaml', '.github'],
+    ignores: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/pnpm-lock.yaml',
+      '.github/**',
+      '**/.turbo/**',
+      'packages/vue-semi-design-docs/.vitepress/theme/useComponents.js',
+    ],
   },
   {
     files: ['**/*.vue'],

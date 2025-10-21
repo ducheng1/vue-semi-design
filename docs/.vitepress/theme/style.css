@@ -139,3 +139,17 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+.demo-block {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.demo-block + .demo-block {
+  margin-top: 12px;
+}
+
+.VPHomeHero .VPImage {
+  width: 100%;
+}
