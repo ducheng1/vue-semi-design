@@ -1,36 +1,42 @@
-# 按钮
+---
+order: 2
+---
 
-## 按钮类型
+# Button
+
+Commonly used button.
+
+## Types
 
 :::demo
 button/type
 :::
 
-## 按钮主题
+## Themes
 
 :::demo
 button/theme
 :::
 
-## 按钮尺寸
+## Sizes
 
 :::demo
 button/size
 :::
 
-## 块状按钮
+## Block Button
 
 :::demo
 button/block
 :::
 
-## 图标按钮
+## Icon Button
 
 :::demo
 button/icon
 :::
 
-## 按钮组
+## Button Group
 
 :::demo
 button/group

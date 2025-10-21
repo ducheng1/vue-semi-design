@@ -10,11 +10,11 @@ hero:
     alt: logo
   actions:
     - theme: brand
-      text: 指南
-      link: /guide/quick-start/
+      text: Guide
+      link: /guide/quick-start
     - theme: alt
-      text: 组件
-      link: /components/introduction/
+      text: Components
+      link: /components/overview/introduction
 
 features:
   - title: Feature A

@@ -159,3 +159,8 @@
   margin: 0;
   border-radius: 0;
 }
+
+.vp-doc h2 {
+  margin-top: 0;
+  border-top: none;
+}

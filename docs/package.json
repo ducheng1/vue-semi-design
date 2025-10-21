@@ -29,9 +29,9 @@
     "vue-semi-design": "catalog:"
   },
   "devDependencies": {
-    "@nolebase/vitepress-plugin-sidebar": "catalog:",
     "@types/markdown-it-container": "catalog:",
     "markdown-it-container": "catalog:",
-    "sass": "catalog:"
+    "sass": "catalog:",
+    "vitepress-sidebar": "catalog:"
   }
 }

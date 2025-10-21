@@ -6,183 +6,27 @@ settings:
 
 catalogs:
   default:
-    '@antfu/eslint-config':
-      specifier: ^6.0.0
-      version: 6.0.0
-    '@commitlint/cli':
-      specifier: ^20.1.0
-      version: 20.1.0
-    '@commitlint/config-conventional':
-      specifier: ^20.0.0
-      version: 20.0.0
-    '@nolebase/vitepress-plugin-sidebar':
-      specifier: ^2.18.2
-      version: 2.18.2
-    '@rsbuild/core':
-      specifier: ~1.5.17
-      version: 1.5.17
-    '@rsbuild/plugin-sass':
-      specifier: ^1.4.0
-      version: 1.4.0
-    '@rsbuild/plugin-vue':
-      specifier: ^1.2.0
-      version: 1.2.0
-    '@rslib/core':
-      specifier: ^0.15.1
-      version: 0.15.1
-    '@storybook/addon-docs':
-      specifier: ^9.1.13
-      version: 9.1.13
-    '@storybook/addon-essentials':
-      specifier: 9.0.0-alpha.12
-      version: 9.0.0-alpha.12
-    '@storybook/addon-interactions':
-      specifier: ^9.0.0-alpha.10
-      version: 9.0.0-alpha.10
-    '@storybook/addon-links':
-      specifier: ^9.1.13
-      version: 9.1.13
-    '@storybook/addon-onboarding':
-      specifier: ^9.1.13
-      version: 9.1.13
-    '@storybook/blocks':
-      specifier: 9.0.0-alpha.17
-      version: 9.0.0-alpha.17
-    '@storybook/test':
-      specifier: ^9.0.0-alpha.2
-      version: 9.0.0-alpha.2
-    '@storybook/vue3':
-      specifier: ^9.1.13
-      version: 9.1.13
-    '@testing-library/jest-dom':
-      specifier: ^6.9.1
-      version: 6.9.1
-    '@testing-library/vue':
-      specifier: ^8.1.0
-      version: 8.1.0
     '@types/markdown-it-container':
       specifier: ^2.0.10
       version: 2.0.10
-    '@vitejs/plugin-vue':
-      specifier: ^6.0.1
-      version: 6.0.1
     '@vue-semi-design/icons':
       specifier: npm:@vue-semi-design/icons@latest
       version: 1.0.3
-    '@vueuse/components':
-      specifier: ^13.9.0
-      version: 13.9.0
-    '@vueuse/core':
-      specifier: ^13.9.0
-      version: 13.9.0
-    autoprefixer:
-      specifier: ^10.4.21
-      version: 10.4.21
-    bumpp:
-      specifier: ^10.3.1
-      version: 10.3.1
-    commitizen:
-      specifier: ^4.3.1
-      version: 4.3.1
-    cssnano:
-      specifier: ^7.1.1
-      version: 7.1.1
-    cz-git:
-      specifier: ^1.12.0
-      version: 1.12.0
-    es-toolkit:
-      specifier: ^1.40.0
-      version: 1.40.0
-    eslint:
-      specifier: ^9.38.0
-      version: 9.38.0
-    eslint-config-prettier:
-      specifier: ^10.1.8
-      version: 10.1.8
-    eslint-plugin-prettier:
-      specifier: ^5.5.4
-      version: 5.5.4
-    glob:
-      specifier: ^11.0.3
-      version: 11.0.3
-    husky:
-      specifier: ^9.1.7
-      version: 9.1.7
-    jsdom:
-      specifier: ^27.0.1
-      version: 27.0.1
-    lint-staged:
-      specifier: ^16.2.5
-      version: 16.2.5
     markdown-it-container:
       specifier: ^4.0.0
       version: 4.0.0
-    npm-run-all2:
-      specifier: ^8.0.4
-      version: 8.0.4
-    postcss-html:
-      specifier: ^1.8.0
-      version: 1.8.0
-    prettier:
-      specifier: ^3.6.2
-      version: 3.6.2
-    rimraf:
-      specifier: ^6.0.1
-      version: 6.0.1
-    rsbuild-plugin-unplugin-vue:
-      specifier: ^0.1.0
-      version: 0.1.0
     sass:
       specifier: ^1.93.2
       version: 1.93.2
-    storybook:
-      specifier: ^9.1.13
-      version: 9.1.13
-    storybook-vue3-rsbuild:
-      specifier: ^2.1.2
-      version: 2.1.2
-    stylelint:
-      specifier: ^16.25.0
-      version: 16.25.0
-    stylelint-config-clean-order:
-      specifier: ^7.0.0
-      version: 7.0.0
-    stylelint-config-recommended-vue:
-      specifier: ^1.6.1
-      version: 1.6.1
-    stylelint-config-standard-scss:
-      specifier: ^16.0.0
-      version: 16.0.0
-    stylelint-prettier:
-      specifier: ^5.0.3
-      version: 5.0.3
-    svgo:
-      specifier: ^4.0.0
-      version: 4.0.0
-    tsx:
-      specifier: ^4.20.6
-      version: 4.20.6
-    turbo:
-      specifier: ^2.5.8
-      version: 2.5.8
-    typescript:
-      specifier: ^5.9.3
-      version: 5.9.3
     vitepress:
       specifier: ^1.6.4
       version: 1.6.4
-    vitest:
-      specifier: ^3.2.4
-      version: 3.2.4
-    vue:
-      specifier: ^3.5.22
-      version: 3.5.22
+    vitepress-sidebar:
+      specifier: ^1.33.0
+      version: 1.33.0
     vue-semi-design:
       specifier: npm:vue-semi-design@latest
       version: 0.0.1-alpha.8
-    vue-tsc:
-      specifier: ^3.0.9
-      version: 3.1.1
 
 importers:
 
@@ -317,14 +161,11 @@ importers:
         version: 1.0.3(vue@3.5.22(typescript@5.9.3))
       vitepress:
         specifier: 'catalog:'
-        version: 1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(@types/react@19.1.12)(change-case@5.4.4)(postcss@8.5.6)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3)
+        version: 1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(change-case@5.4.4)(postcss@8.5.6)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3)
       vue-semi-design:
         specifier: 'catalog:'
         version: 0.0.1-alpha.8(vue@3.5.22(typescript@5.9.3))
     devDependencies:
-      '@nolebase/vitepress-plugin-sidebar':
-        specifier: 'catalog:'
-        version: 2.18.2(vitepress@1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(@types/react@19.1.12)(change-case@5.4.4)(postcss@8.5.6)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3))
       '@types/markdown-it-container':
         specifier: 'catalog:'
         version: 2.0.10
@@ -334,6 +175,9 @@ importers:
       sass:
         specifier: 'catalog:'
         version: 1.93.2
+      vitepress-sidebar:
+        specifier: 'catalog:'
+        version: 1.33.0
 
   packages/vue-semi-design:
     dependencies:
@@ -1870,11 +1714,6 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
-
-  '@nolebase/vitepress-plugin-sidebar@2.18.2':
-    resolution: {integrity: sha512-iSk+jZ3mATGizaXSprXqPxeSJl7Y0eNLoLulUSm1ka4PYF4pO7CvG8PCupGUIB0eEiN3GdgfJqBHfywDWQX8MQ==}
-    peerDependencies:
-      vitepress: ^1.5.0 || ^2.0.0-alpha.1
 
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
@@ -4083,10 +3922,6 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  fs-extra@11.3.1:
-    resolution: {integrity: sha512-eXvGGwZ5CL17ZSwHWd3bbgk7UUpF6IFHtP57NYYakPvHOs8GDgDe5KJI36jIJzDkJ6eJjuzRA8eBQb6SkKue0g==}
-    engines: {node: '>=14.14'}
-
   fs-extra@11.3.2:
     resolution: {integrity: sha512-Xr9F6z6up6Ws+NjzMCZc6WXg2YFRlrLP9NQDO3VQrWrfiojdhS56TzueT88ze0uBdCTwEIhQ3ptnmKeWGFAe0A==}
     engines: {node: '>=14.14'}
@@ -5668,6 +5503,10 @@ packages:
     resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
     engines: {node: '>=0.6'}
 
+  qsu@1.10.2:
+    resolution: {integrity: sha512-+37VW4m47xbKfh65Wn6Xr9fnYF3QvtRSgRCSh2gtEyXlUI1SzFZtUFdRKA5+7sJkZbMEVVwhy5SOYkWA3N7gLw==}
+    engines: {node: '>=18.0.0'}
+
   quansync@0.2.11:
     resolution: {integrity: sha512-AifT7QEbW9Nri4tAwR5M/uzpBuqfZf+zwaEM/QkzEjj7NBuFD2rBuy0K3dE+8wltbezDV7JMA0WfnCPYRSYbXA==}
 
@@ -6816,6 +6655,10 @@ packages:
         optional: true
       yaml:
         optional: true
+
+  vitepress-sidebar@1.33.0:
+    resolution: {integrity: sha512-+z45vGG6OQRKNU7OMhmrp5y9dk9Y8loFZGE2LwzqloqA4p+ECP3/Ti6qrS8kB3N8Rol4v0Nf8HSnsgZEDU4HXQ==}
+    engines: {node: '>=18.0.0'}
 
   vitepress@1.6.4:
     resolution: {integrity: sha512-+2ym1/+0VVrbhNyRoFFesVvBvHAVMZMK0rw60E3X/5349M1GuVdKeazuksqopEdvkKwKGs21Q729jX81/bkBJg==}
@@ -8294,9 +8137,9 @@ snapshots:
 
   '@docsearch/css@3.8.2': {}
 
-  '@docsearch/js@3.8.2(@algolia/client-search@5.37.0)(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(search-insights@2.17.3)':
+  '@docsearch/js@3.8.2(@algolia/client-search@5.37.0)(search-insights@2.17.3)':
     dependencies:
-      '@docsearch/react': 3.8.2(@algolia/client-search@5.37.0)(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(search-insights@2.17.3)
+      '@docsearch/react': 3.8.2(@algolia/client-search@5.37.0)(search-insights@2.17.3)
       preact: 10.27.1
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -8305,16 +8148,13 @@ snapshots:
       - react-dom
       - search-insights
 
-  '@docsearch/react@3.8.2(@algolia/client-search@5.37.0)(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(search-insights@2.17.3)':
+  '@docsearch/react@3.8.2(@algolia/client-search@5.37.0)(search-insights@2.17.3)':
     dependencies:
       '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@5.37.0)(algoliasearch@5.37.0)(search-insights@2.17.3)
       '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@5.37.0)(algoliasearch@5.37.0)
       '@docsearch/css': 3.8.2
       algoliasearch: 5.37.0
     optionalDependencies:
-      '@types/react': 19.1.12
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
       search-insights: 2.17.3
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -8735,13 +8575,6 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
-
-  '@nolebase/vitepress-plugin-sidebar@2.18.2(vitepress@1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(@types/react@19.1.12)(change-case@5.4.4)(postcss@8.5.6)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3))':
-    dependencies:
-      fs-extra: 11.3.1
-      gray-matter: 4.0.3
-      tinyglobby: 0.2.14
-      vitepress: 1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(@types/react@19.1.12)(change-case@5.4.4)(postcss@8.5.6)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3)
 
   '@one-ini/wasm@0.1.1': {}
 
@@ -11217,12 +11050,6 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  fs-extra@11.3.1:
-    dependencies:
-      graceful-fs: 4.2.11
-      jsonfile: 6.2.0
-      universalify: 2.0.1
-
   fs-extra@11.3.2:
     dependencies:
       graceful-fs: 4.2.11
@@ -12987,6 +12814,8 @@ snapshots:
     dependencies:
       side-channel: 1.1.0
 
+  qsu@1.10.2: {}
+
   quansync@0.2.11: {}
 
   queue-microtask@1.2.3: {}
@@ -14175,10 +14004,16 @@ snapshots:
       tsx: 4.20.6
       yaml: 2.8.1
 
-  vitepress@1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(@types/react@19.1.12)(change-case@5.4.4)(postcss@8.5.6)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3):
+  vitepress-sidebar@1.33.0:
+    dependencies:
+      glob: 10.4.5
+      gray-matter: 4.0.3
+      qsu: 1.10.2
+
+  vitepress@1.6.4(@algolia/client-search@5.37.0)(@types/node@24.3.1)(change-case@5.4.4)(postcss@8.5.6)(sass-embedded@1.92.0)(sass@1.93.2)(search-insights@2.17.3)(terser@5.44.0)(typescript@5.9.3):
     dependencies:
       '@docsearch/css': 3.8.2
-      '@docsearch/js': 3.8.2(@algolia/client-search@5.37.0)(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(search-insights@2.17.3)
+      '@docsearch/js': 3.8.2(@algolia/client-search@5.37.0)(search-insights@2.17.3)
       '@iconify-json/simple-icons': 1.2.50
       '@shikijs/core': 2.5.0
       '@shikijs/transformers': 2.5.0
