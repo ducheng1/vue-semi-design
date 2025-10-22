@@ -4,17 +4,17 @@ layout: home
 
 hero:
   name: "Vue Semi Design"
-  text: "A vue component library based on semi design"
+  text: "一個基於 Semi Design 設計語言的 vue 組件庫"
   image:
     src: /semi_logo.svg
     alt: logo
   actions:
     - theme: brand
-      text: Guide
-      link: /guide/quick-start
+      text: 快速上手
+      link: /zhHant/guide/quick-start
     - theme: alt
-      text: Components
-      link: /components/overview/introduction
+      text: 組件
+      link: /zhHant/components/overview/introduction
 
 features:
   - title: Feature A

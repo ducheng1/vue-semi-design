@@ -1,0 +1,6 @@
+{
+  "editLink": {
+    "pattern": "https://github.com/ducheng1/vue-semi-design/blob/dev/docs/src/:path",
+    "text": "Edit this page on GitHub"
+  }
+}

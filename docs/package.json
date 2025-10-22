@@ -3,13 +3,13 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "vue semi design icons",
+  "description": "vue semi design docs",
   "author": {
     "name": "ducheng1",
     "email": "w729567588@163.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/ducheng1/vue-semi-design",
+  "homepage": "https://vsd.dcwedu.top",
   "repository": {
     "type": "git",
     "url": "https://github.com/ducheng1/vue-semi-design.git"
@@ -32,6 +32,7 @@
     "@types/markdown-it-container": "catalog:",
     "markdown-it-container": "catalog:",
     "sass": "catalog:",
+    "vitepress-i18n": "catalog:",
     "vitepress-sidebar": "catalog:"
   }
 }
