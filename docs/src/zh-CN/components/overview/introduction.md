@@ -1,3 +1,3 @@
-# Introduction
+# 介绍
 
-Semi Design is a design system that defines a set of back-end design and front-end basic components, helping us to create a more consistent user experience more easily.
+Semi Design 是一个设计系统，它定义了一套中后台设计与前端基础组件，帮助我们更容易地创造更加一致的用户体验。
